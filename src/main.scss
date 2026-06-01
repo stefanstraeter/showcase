@@ -48,8 +48,6 @@ body {
 }
 
 // ─── Main ───────────────────────────────────────────────────────────────────
-// Two equal columns; content lives in the left column → naturally left-of-center.
-// On mobile both columns collapse so the headline stays within bounds.
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -94,7 +92,6 @@ body {
   text-decoration: none;
   transition: color 0.3s ease;
 
-  // Underline drawn via pseudo-element — wipes in from left on hover
   &::after {
     content: "";
     display: block;
