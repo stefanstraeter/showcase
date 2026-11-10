@@ -42,6 +42,7 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+CLAUDE.md
 
 # Secrets (generated from .env)
 .env
