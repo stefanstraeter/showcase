@@ -1,5 +1,31 @@
-@use 'variables' as v;
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-Variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
 
-// ==========================================================================
-// PLACEHDOLDER
-// ==========================================================================
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-VariableItalic.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jet-brains-mono/JetBrainsMono-Variable.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jet-brains-mono/JetBrainsMono-VariableItalic.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: italic;
+  font-display: swap;
+}
