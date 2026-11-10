@@ -7,29 +7,44 @@ $color-primary-dark: #1b2a8f;
 $color-ink: #141414;
 $color-muted: #555555;
 $color-surface: #eeeff2;
+$color-tint: #eef0fc;
 $color-white: #ffffff;
+$color-line-soft: #d9dbe3;
 
 // ==========================================================================
 // TYPOGRAPHY
 // ==========================================================================
 
-$font-display: "Instrument Serif", serif;
-$font-body: "Inter", system-ui, sans-serif;
-$font-mono: "IBM Plex Mono", monospace;
+$font-display: "Lora", Georgia, serif;
+$font-body: "Lora", Georgia, serif;
+$font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+
+$letter-spacing-label: 0.04em;
+$text-transform-label: uppercase;
 
 $text-hero: 168px;
-$text-hero-mobile: 76px;
+$text-hero-mobile: 68px;
 $text-h2: 64px;
-$text-h2-mobile: 48px;
-$text-lead: 52px;
-$text-lead-mobile: 34px;
-$text-h3: 48px;
-$text-h3-mobile: 34px;
-$text-list: 30px;
-$text-list-mobile: 24px;
-$text-body: 17px;
-$text-body-mobile: 16px;
-$text-small: 14px;
+$text-h2-mobile: 46px;
+$text-lead: 44px;
+$text-lead-mobile: 32px;
+$text-h3: 44px;
+$text-h3-mobile: 32px;
+$text-list: 24px;
+$text-list-mobile: 20px;
+$text-body: 18px;
+$text-body-mobile: 17px;
+$text-small: 15px;
 $text-label: 12px;
 
 // ==========================================================================
@@ -45,7 +60,7 @@ $space-2xl: 80px;
 $space-3xl: 120px;
 
 $container-width: 1320px;
-$gutter: 32px;
+$gutter: 56px;
 $gutter-mobile: 20px;
 
 // ==========================================================================
@@ -64,6 +79,7 @@ $radius-image: 0;
 $color-line: $color-ink;
 $color-line-on-primary: rgba(255, 255, 255, 0.45);
 $border: 1px solid $color-line;
+$border-soft: 1px solid $color-line-soft;
 $border-on-primary: 1px solid $color-line-on-primary;
 
 // ==========================================================================
