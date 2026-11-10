@@ -1,0 +1,43 @@
+@use "variables" as *;
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  box-sizing: border-box;
+
+  @include mobile {
+    padding-left: $gutter-mobile;
+    padding-right: $gutter-mobile;
+  }
+}
+
+@mixin full-screen {
+  min-height: 100svh;
+}
+
+@mixin label {
+  font-family: $font-mono;
+  font-size: $text-label;
+  color: $color-muted;
+}
+
+@mixin heading-2 {
+  margin: 0;
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: $text-h2;
+  line-height: 1;
+
+  @include mobile {
+    font-size: $text-h2-mobile;
+  }
+}
