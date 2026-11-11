@@ -15,9 +15,9 @@ $color-line-soft: #d9dbe3;
 // TYPOGRAPHY
 // ==========================================================================
 
-$font-display: "Lora", Georgia, serif;
-$font-body: "Lora", Georgia, serif;
-$font-mono: "JetBrains Mono", ui-monospace, monospace;
+$font-display: 'Lora', Georgia, serif;
+$font-body: 'Lora', Georgia, serif;
+$font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
 $font-weight-thin: 100;
 $font-weight-extra-light: 200;
@@ -29,45 +29,48 @@ $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
 $font-weight-black: 900;
 
+$line-height-tight: 0.88;
+$line-height-heading: 1;
+$line-height-list: 1.3;
+$line-height-body: 1.5;
+
 $letter-spacing-label: 0.04em;
+$letter-spacing-hero: -0.02em;
 $text-transform-label: uppercase;
 
-$text-hero: 168px;
-$text-hero-mobile: 68px;
-$text-h2: 64px;
-$text-h2-mobile: 46px;
-$text-lead: 44px;
-$text-lead-mobile: 32px;
-$text-h3: 44px;
-$text-h3-mobile: 32px;
-$text-list: 24px;
-$text-list-mobile: 20px;
-$text-body: 18px;
-$text-body-mobile: 17px;
-$text-small: 15px;
-$text-label: 12px;
+$text-hero: clamp(4.25rem, 2.25rem + 10vw, 10.5rem);
+$text-h2: clamp(2.875rem, 2.515rem + 1.8vw, 4rem);
+$text-lead: clamp(2rem, 1.76rem + 1.2vw, 2.75rem);
+$text-h3: clamp(2rem, 1.76rem + 1.2vw, 2.75rem);
+$text-list: 1.5rem;
+$text-list-mobile: 1.25rem;
+$text-body: 1.125rem;
+$text-body-mobile: 1.0625rem;
+$text-small: 0.9375rem;
+$text-label: 0.75rem;
 
 // ==========================================================================
 // SPACING & LAYOUT
 // ==========================================================================
 
-$space-xs: 8px;
-$space-s: 16px;
-$space-m: 24px;
-$space-l: 32px;
-$space-xl: 48px;
-$space-2xl: 80px;
-$space-3xl: 120px;
+$space-xs: 0.5rem;
+$space-s: 1rem;
+$space-m: 1.5rem;
+$space-l: 2rem;
+$space-xl: 3rem;
+$space-2xl: 5rem;
+$space-3xl: 7.5rem;
 
-$container-width: 1320px;
-$gutter: 56px;
-$gutter-mobile: 20px;
+$container-width: 82.5rem;
+$gutter: 3.5rem;
+$gutter-mobile: 1.25rem;
 
 // ==========================================================================
 // BREAKPOINTS
 // ==========================================================================
 
-$breakpoint-mobile: 800px;
+$breakpoint-tablet: 50rem;
+$breakpoint-desktop: 64rem;
 
 // ==========================================================================
 // SHAPES
