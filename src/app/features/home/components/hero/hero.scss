@@ -1,0 +1,7 @@
+@use 'variables' as v;
+
+.hero {
+  min-height: v.$hero-min-height;
+  background-color: v.$color-primary;
+  color: v.$color-white;
+}
