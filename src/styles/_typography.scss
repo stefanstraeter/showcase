@@ -3,3 +3,26 @@
 // ==========================================================================
 // TYPOGRAPHY
 // ==========================================================================
+
+body {
+  font-family: v.$font-body;
+  font-size: v.$text-body-mobile;
+  font-weight: v.$font-weight-regular;
+  line-height: v.$line-height-body;
+  color: v.$color-ink;
+
+  @media (min-width: v.$breakpoint-tablet) {
+    font-size: v.$text-body;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: v.$font-display;
+  font-weight: v.$font-weight-regular;
+  line-height: v.$line-height-heading;
+}
