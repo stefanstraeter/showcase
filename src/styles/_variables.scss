@@ -94,3 +94,14 @@ $transition: 0.25s ease;
 // ==========================================================================
 // COMPONENT
 // ==========================================================================
+
+$button-padding-block: 0.6875rem;
+$button-padding-inline: 1.375rem;
+$button-gap: $space-xs;
+$button-border: 1px solid currentColor;
+$button-light-color: $color-white;
+$button-light-hover-background: $color-white;
+$button-light-hover-color: $color-primary;
+$button-dark-color: $color-ink;
+$button-dark-hover-background: $color-ink;
+$button-dark-hover-color: $color-white;
