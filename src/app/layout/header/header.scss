@@ -1,0 +1,54 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+:host {
+  display: block;
+  background-color: v.$color-primary;
+}
+
+.header {
+  @include m.content-width;
+  @include m.label;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  height: v.$header-height-mobile;
+  border-bottom: v.$border-on-primary;
+  color: v.$color-white;
+
+  @include m.tablet {
+    grid-template-columns: 1fr auto 1fr;
+    height: v.$header-height;
+  }
+}
+
+.header__logo-name {
+  font-family: v.$font-display;
+  font-size: v.$header-logo-size;
+  font-weight: v.$header-logo-weight;
+  letter-spacing: v.$header-logo-letter-spacing;
+  text-transform: none;
+}
+
+.header__nav {
+  display: none;
+
+  @include m.tablet {
+    display: block;
+  }
+}
+
+.header__list {
+  display: flex;
+  gap: v.$header-nav-gap;
+  list-style: none;
+}
+
+.header__button {
+  display: none;
+
+  @include m.tablet {
+    display: flex;
+    justify-self: end;
+  }
+}
