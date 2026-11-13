@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Button } from '@shared/components/button/button';
+
+import { LocalTime } from '@core/services/local-time';
 
 @Component({
-  imports: [RouterLink, Button],
+  imports: [RouterLink],
   selector: 'app-header',
   styleUrl: './header.scss',
   templateUrl: './header.html',
 })
-export class Header {}
+export class Header {
+  protected readonly localTime = inject(LocalTime);
+}
