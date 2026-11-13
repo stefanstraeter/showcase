@@ -1,6 +1,6 @@
 <header class="header">
   <a class="header__logo" routerLink="/">
-    <span class="header__logo-name">S.Straeter</span>
+    <span class="header__logo-name">S.Sträter</span>
   </a>
 
   <nav class="header__nav" aria-label="Main navigation">
@@ -13,4 +13,11 @@
   </nav>
 
   <span class="header__timer">Local time {{ localTime.time() }}</span>
+
+  <app-icon-button
+    class="header__menu-button"
+    [label]="menuLabel()"
+    [icon]="menuIcon()"
+    (click)="toggleMenu()"
+  />
 </header>
