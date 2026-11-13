@@ -15,8 +15,8 @@ $color-line-soft: #d9dbe3;
 // TYPOGRAPHY
 // ==========================================================================
 
-$font-display: 'Lora', Georgia, serif;
-$font-body: 'Lora', Georgia, serif;
+$font-display: 'Instrument Serif', Georgia, serif;
+$font-body: 'Satoshi', system-ui, sans-serif;
 $font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
 $font-weight-thin: 100;
@@ -38,15 +38,15 @@ $letter-spacing-label: 0.04em;
 $letter-spacing-hero: -0.02em;
 $text-transform-label: uppercase;
 
-$text-hero: clamp(4.25rem, 2.25rem + 10vw, 10.5rem);
-$text-h2: clamp(2.875rem, 2.515rem + 1.8vw, 4rem);
-$text-lead: clamp(2rem, 1.76rem + 1.2vw, 2.75rem);
-$text-h3: clamp(2rem, 1.76rem + 1.2vw, 2.75rem);
-$text-list: 1.5rem;
-$text-list-mobile: 1.25rem;
-$text-body: 1.125rem;
-$text-body-mobile: 1.0625rem;
-$text-small: 0.9375rem;
+$text-hero: clamp(4.75rem, 10.5vw, 10.5rem);
+$text-h2: clamp(3rem, 1.75rem + 2.5vw, 4rem);
+$text-lead: clamp(2.125rem, 0.72rem + 2.81vw, 3.25rem);
+$text-h3: clamp(2.125rem, 1.03rem + 2.19vw, 3rem);
+$text-list: 1.875rem;
+$text-list-mobile: 1.5rem;
+$text-body: 1.0625rem;
+$text-body-mobile: 1rem;
+$text-small: 0.875rem;
 $text-label: 0.75rem;
 
 // ==========================================================================
@@ -61,8 +61,8 @@ $space-xl: 3rem;
 $space-2xl: 5rem;
 $space-3xl: 7.5rem;
 
-$container-width: 82.5rem;
-$gutter: 3.5rem;
+$container-width: 120rem;
+$gutter: clamp(1.25rem, 4vw, 4rem);
 $gutter-mobile: 1.25rem;
 
 // ==========================================================================
@@ -95,8 +95,8 @@ $transition: 0.25s ease;
 // COMPONENT
 // ==========================================================================
 
-$button-padding-block: 0.6875rem;
-$button-padding-inline: 1.375rem;
+$button-padding-block: 0.4rem;
+$button-padding-inline: 1rem;
 $button-gap: $space-xs;
 $button-border: 1px solid currentColor;
 $button-light-color: $color-white;
@@ -113,4 +113,12 @@ $header-logo-size: 1.25rem;
 $header-logo-weight: $font-weight-medium;
 $header-logo-letter-spacing: -0.01em;
 
-$hero-min-height: 40rem;
+$hero-gap: $space-l;
+$hero-padding-block: $space-l;
+$hero-padding-block-desktop: $space-xl;
+$hero-claim-gap: 1.75rem;
+$hero-lead-max-width: 40rem;
+$hero-sub-opacity: 0.9;
+$hero-photo-ratio: 4 / 5;
+$hero-photo-width: 32.5rem;
+$hero-photo-height: 40rem;

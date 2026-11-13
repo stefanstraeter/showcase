@@ -1,8 +1,9 @@
 @use 'variables' as v;
-@use 'mixins' as m;
 
 .button {
-  @include m.label;
+  font-family: v.$font-body;
+  font-size: v.$text-small;
+  text-transform: none;
   display: inline-flex;
   align-items: center;
   gap: v.$button-gap;

@@ -1,7 +1,91 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
-.hero {
-  min-height: v.$hero-min-height;
+:host {
+  display: block;
   background-color: v.$color-primary;
   color: v.$color-white;
+}
+
+.hero {
+  @include m.content-width;
+  display: grid;
+  gap: v.$hero-gap;
+  padding-top: v.$hero-padding-block;
+  padding-bottom: v.$hero-padding-block;
+
+  @include m.desktop {
+    grid-template-columns: 1fr v.$hero-photo-width;
+    grid-template-rows: 1fr auto;
+    column-gap: v.$gutter;
+    padding-top: v.$hero-padding-block-desktop;
+    padding-bottom: v.$hero-padding-block-desktop;
+  }
+}
+
+.hero__title {
+  margin: 0;
+  font-family: v.$font-display;
+  font-weight: v.$font-weight-regular;
+  font-size: v.$text-hero;
+  line-height: v.$line-height-tight;
+  letter-spacing: v.$letter-spacing-hero;
+
+  @include m.desktop {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+.hero__figure {
+  margin: 0;
+
+  @include m.desktop {
+    grid-column: 2;
+    grid-row: 1 / -1;
+  }
+}
+
+.hero__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: v.$hero-photo-ratio;
+  object-fit: cover;
+  border-radius: v.$radius-image;
+
+  @include m.desktop {
+    height: v.$hero-photo-height;
+    aspect-ratio: auto;
+  }
+}
+
+.hero__claim {
+  @include m.desktop {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  hr {
+    margin: 0 0 v.$hero-claim-gap;
+    border: 0;
+    border-top: v.$border-on-primary;
+  }
+
+  app-button {
+    display: inline-block;
+    margin-top: v.$hero-claim-gap;
+  }
+}
+
+.hero__lead {
+  max-width: v.$hero-lead-max-width;
+  margin: 0;
+  font-family: v.$font-display;
+  font-size: v.$text-lead;
+  line-height: v.$line-height-heading;
+}
+
+.hero__sub {
+  margin: v.$space-s 0 0;
+  opacity: v.$hero-sub-opacity;
 }

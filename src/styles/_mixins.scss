@@ -12,6 +12,12 @@
   }
 }
 
+@mixin hover-device {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
 @mixin content-width {
   width: 100%;
   max-width: $container-width;
