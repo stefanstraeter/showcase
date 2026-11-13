@@ -1,0 +1,43 @@
+@use 'variables' as v;
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: v.$icon-button-size;
+  height: v.$icon-button-size;
+  padding: 0;
+  border: v.$icon-button-border;
+  border-radius: v.$radius-pill;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+
+  &__icon {
+    width: v.$icon-button-icon-size;
+    height: v.$icon-button-icon-size;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: v.$icon-button-stroke-width;
+    stroke-linecap: round;
+  }
+
+  &__line {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform v.$transition;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  &--close &__line--top {
+    transform: translateY(v.$icon-button-line-offset * 1px) rotate(v.$icon-button-close-angle);
+  }
+
+  &--close &__line--bottom {
+    transform: translateY(v.$icon-button-line-offset * -1px)
+      rotate(-1 * v.$icon-button-close-angle);
+  }
+}

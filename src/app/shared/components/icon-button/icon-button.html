@@ -1,0 +1,11 @@
+<button
+  class="icon-button"
+  type="button"
+  [class.icon-button--close]="icon() === 'close'"
+  [attr.aria-label]="label()"
+>
+  <svg class="icon-button__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path class="icon-button__line icon-button__line--top" d="M4 9h16" />
+    <path class="icon-button__line icon-button__line--bottom" d="M4 15h16" />
+  </svg>
+</button>
