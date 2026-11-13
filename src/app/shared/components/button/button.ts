@@ -10,5 +10,5 @@ import { RouterLink } from '@angular/router';
 export class Button {
   variant = input<'light' | 'dark'>('light');
   link = input<string>('/');
-  anchor = input<string | undefined>(undefined);
+  fragment = input<string | undefined>(undefined);
 }
