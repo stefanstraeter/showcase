@@ -38,7 +38,7 @@ $letter-spacing-label: 0.04em;
 $letter-spacing-hero: -0.02em;
 $text-transform-label: uppercase;
 
-$text-hero: clamp(4.75rem, 10.5vw, 10.5rem);
+$text-hero: clamp(5rem, 10vw, 15rem);
 $text-h2: clamp(3rem, 1.75rem + 2.5vw, 4rem);
 $text-lead: clamp(2.125rem, 0.72rem + 2.81vw, 3.25rem);
 $text-h3: clamp(2.125rem, 1.03rem + 2.19vw, 3rem);
@@ -95,10 +95,14 @@ $transition: 0.25s ease;
 // COMPONENT
 // ==========================================================================
 
-$button-padding-block: 0.4rem;
-$button-padding-inline: 1rem;
+$button-padding-block: 0.6rem;
+$button-padding-inline: 1.25rem;
 $button-gap: $space-xs;
+$button-font-family: $font-body;
+$button-font-size: $text-small;
+$button-font-weight: $font-weight-medium;
 $button-border: 1px solid currentColor;
+$button-radius: $radius-pill;
 $button-light-color: $color-white;
 $button-light-hover-background: $color-white;
 $button-light-hover-color: $color-primary;
@@ -106,8 +110,15 @@ $button-dark-color: $color-ink;
 $button-dark-hover-background: $color-ink;
 $button-dark-hover-color: $color-white;
 
+$icon-button-size: 2.5rem;
+$icon-button-icon-size: 1.125rem;
+$icon-button-border: 1px solid currentColor;
+$icon-button-stroke-width: 1.6;
+$icon-button-line-offset: 3;
+$icon-button-close-angle: 45deg;
+
 $header-height-mobile: 4rem;
-$header-height: 4.5rem;
+$header-height: 5rem;
 $header-nav-gap: 2.5rem;
 $header-logo-size: 1.6rem;
 $header-logo-weight: $font-weight-medium;
@@ -120,5 +131,4 @@ $hero-claim-gap: 1.75rem;
 $hero-lead-max-width: 40rem;
 $hero-sub-opacity: 0.9;
 $hero-photo-ratio: 4 / 5;
-$hero-photo-width: 32.5rem;
-$hero-photo-height: 40rem;
+$hero-photo-width: clamp(32.5rem, 36vw, 48rem);
