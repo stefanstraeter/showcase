@@ -39,6 +39,7 @@
 @mixin label {
   font-family: $font-mono;
   font-size: $text-label;
+  font-weight: $font-weight-medium;
   letter-spacing: $letter-spacing-label;
   text-transform: $text-transform-label;
 }
