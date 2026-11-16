@@ -1,3 +1,29 @@
 <section class="about" id="about">
-  <app-section-header number="01">From photographer <em>to developer.</em></app-section-header>
+  <app-section-header class="about__header" number="01"
+    >From photographer <em class="about__emphasis">to developer</em></app-section-header
+  >
+  <p class="about__text">
+    I spent 8 years behind the camera and in marketing – composing images, shaping campaigns and
+    learning what makes people stop and look. In 2026 I completed the front-end certificate at
+    Developer Akademie in Munich. Now I bring the same eye to code: clear structure, careful
+    typography, nothing left to chance.
+  </p>
+
+  <dl class="about__facts">
+    @for (fact of facts; track fact.label) {
+      <div class="about__fact">
+        <dt class="about__label">{{ fact.label }}</dt>
+        <dd class="about__value">{{ fact.value }}</dd>
+      </div>
+    }
+  </dl>
+
+  <app-button
+    class="about__download"
+    href="/pdf/CV_Stefan_Straeter.pdf"
+    [download]="true"
+    variant="dark"
+    >Download CV (PDF) ↓</app-button
+  >
 </section>
+<app-photo-strip />
