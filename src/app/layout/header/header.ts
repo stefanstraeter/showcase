@@ -2,10 +2,11 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { LocalTime } from '@core/services/local-time';
+import { MobileMenu } from '@layout/mobile-menu/mobile-menu';
 import { IconButton } from '@shared/components/icon-button/icon-button';
 
 @Component({
-  imports: [RouterLink, IconButton],
+  imports: [RouterLink, IconButton, MobileMenu],
   selector: 'app-header',
   styleUrl: './header.scss',
   templateUrl: './header.html',
@@ -25,5 +26,13 @@ export class Header {
    */
   toggleMenu(): void {
     this.isMenuOpen.update((isOpen: boolean): boolean => !isOpen);
+  }
+
+  /**
+   * @description Closes the mobile menu, regardless of its current state.
+   * @memberof Header
+   */
+  closeMenu(): void {
+    this.isMenuOpen.set(false);
   }
 }
