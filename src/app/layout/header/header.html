@@ -16,9 +16,9 @@
 
   <app-icon-button
     class="header__menu-button"
-    [label]="menuLabel()"
-    [icon]="menuIcon()"
-    (click)="toggleMenu()"
+    label="Open menu"
+    icon="menu"
+    (click)="openMenu()"
   />
 </header>
 <app-mobile-menu [isOpen]="isMenuOpen()" (closed)="closeMenu()" />
