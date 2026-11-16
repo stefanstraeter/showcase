@@ -55,6 +55,16 @@
     display: flex;
     gap: v.$header-nav-gap;
     list-style: none;
+
+    @include m.hover-device {
+      &:has(.header__link:hover) .header__link:not(:hover) {
+        opacity: v.$header-link-dimmed-opacity;
+      }
+    }
+  }
+
+  &__link {
+    transition: opacity v.$transition;
   }
 
   &__menu-button {
