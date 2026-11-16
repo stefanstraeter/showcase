@@ -88,17 +88,8 @@
     @include m.label;
     display: flex;
     align-items: flex-end;
+    margin-top: auto;
     padding-block: v.$mobile-menu-footer-padding-block;
-  }
-
-  &__monogram {
-    align-self: center;
-    margin-block: auto;
-    font-family: v.$font-display;
-    font-size: v.$mobile-menu-monogram-size;
-    font-style: italic;
-    line-height: v.$line-height-tight;
-    opacity: v.$mobile-menu-monogram-opacity;
   }
 
   &__external {
