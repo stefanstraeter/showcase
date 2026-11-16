@@ -4,6 +4,8 @@ import { RouterLink } from '@angular/router';
 import { LocalTime } from '@core/services/local-time';
 import { MobileMenu } from '@layout/mobile-menu/mobile-menu';
 import { IconButton } from '@shared/components/icon-button/icon-button';
+import { MENU_LINKS } from '@layout/model/constants/menu-links';
+import { MenuLink } from '@layout/model/interfaces/menu-link';
 
 @Component({
   imports: [RouterLink, IconButton, MobileMenu],
@@ -13,6 +15,7 @@ import { IconButton } from '@shared/components/icon-button/icon-button';
 })
 export class Header {
   protected readonly localTime = inject(LocalTime);
+  readonly links: MenuLink[] = MENU_LINKS;
 
   isMenuOpen = signal<boolean>(false);
 
