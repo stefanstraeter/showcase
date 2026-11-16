@@ -25,10 +25,6 @@
     transform-box: fill-box;
     transform-origin: center;
     transition: transform v.$transition;
-
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
   }
 
   &--close &__line--top {
