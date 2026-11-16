@@ -10,13 +10,14 @@ $color-surface: #eeeff2;
 $color-tint: #eef0fc;
 $color-white: #ffffff;
 $color-line-soft: #d9dbe3;
+$color-text-muted-on-primary: #ffffff99;
 
 // ==========================================================================
 // TYPOGRAPHY
 // ==========================================================================
 
-$font-display: 'Lora', Georgia, serif;
-$font-body: 'Lora', Georgia, serif;
+$font-display: 'Instrument Serif', Georgia, serif;
+$font-body: 'Satoshi', system-ui, sans-serif;
 $font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
 $font-weight-thin: 100;
@@ -38,16 +39,16 @@ $letter-spacing-label: 0.04em;
 $letter-spacing-hero: -0.02em;
 $text-transform-label: uppercase;
 
-$text-hero: clamp(4.25rem, 2.25rem + 10vw, 10.5rem);
-$text-h2: clamp(2.875rem, 2.515rem + 1.8vw, 4rem);
-$text-lead: clamp(2rem, 1.76rem + 1.2vw, 2.75rem);
-$text-h3: clamp(2rem, 1.76rem + 1.2vw, 2.75rem);
-$text-list: 1.5rem;
-$text-list-mobile: 1.25rem;
-$text-body: 1.125rem;
-$text-body-mobile: 1.0625rem;
-$text-small: 0.9375rem;
-$text-label: 0.75rem;
+$text-hero: clamp(5rem, 10vw, 15rem);
+$text-h2: clamp(3rem, 1.75rem + 2.5vw, 4rem);
+$text-lead: clamp(2.125rem, 0.72rem + 2.81vw, 3.25rem);
+$text-h3: clamp(2.125rem, 1.03rem + 2.19vw, 3rem);
+$text-list: 1.875rem;
+$text-list-mobile: 1.5rem;
+$text-body: 1.0625rem;
+$text-body-mobile: 1rem;
+$text-small: 0.875rem;
+$text-label: 0.875rem;
 
 // ==========================================================================
 // SPACING & LAYOUT
@@ -61,8 +62,8 @@ $space-xl: 3rem;
 $space-2xl: 5rem;
 $space-3xl: 7.5rem;
 
-$container-width: 82.5rem;
-$gutter: 3.5rem;
+$container-width: 120rem;
+$gutter: clamp(1.25rem, 4vw, 4rem);
 $gutter-mobile: 1.25rem;
 
 // ==========================================================================
@@ -94,3 +95,58 @@ $transition: 0.25s ease;
 // ==========================================================================
 // COMPONENT
 // ==========================================================================
+
+$button-padding-block: 0.6rem;
+$button-padding-inline: 1.25rem;
+$button-gap: $space-xs;
+$button-font-family: $font-body;
+$button-font-size: $text-small;
+$button-font-weight: $font-weight-medium;
+$button-border: 1px solid currentColor;
+$button-radius: $radius-pill;
+$button-light-color: $color-white;
+$button-light-hover-background: $color-white;
+$button-light-hover-color: $color-primary;
+$button-dark-color: $color-ink;
+$button-dark-hover-background: $color-ink;
+$button-dark-hover-color: $color-white;
+
+$icon-button-size: 2.5rem;
+$icon-button-icon-size: 1.125rem;
+$icon-button-border: 1px solid currentColor;
+$icon-button-stroke-width: 1.6;
+$icon-button-line-offset: 3;
+$icon-button-close-angle: 45deg;
+
+$header-height-mobile: 4rem;
+$header-height: 5rem;
+$header-nav-gap: 2.5rem;
+$header-logo-size: 1.6rem;
+$header-logo-weight: $font-weight-medium;
+$header-logo-letter-spacing: -0.01em;
+$header-link-dimmed-opacity: 0.4;
+
+$mobile-menu-header-height: $header-height-mobile;
+$mobile-menu-link-size: $text-h2;
+$mobile-menu-link-gap: $space-m;
+$mobile-menu-number-color: $color-text-muted-on-primary;
+$mobile-menu-link-padding-block: $space-xs;
+$mobile-menu-footer-gap: $space-m;
+$mobile-menu-footer-padding-block: $space-m;
+$mobile-menu-monogram-size: clamp(6rem, 25vh, 14rem);
+$mobile-menu-monogram-opacity: 0.1;
+$mobile-menu-easing: ease-out;
+$mobile-menu-fade-duration: 0.4s;
+$mobile-menu-item-duration: 0.5s;
+$mobile-menu-item-delay: 0.2s;
+$mobile-menu-item-stagger: 0.08s;
+$mobile-menu-item-shift: 1rem;
+
+$hero-gap: $space-l;
+$hero-padding-block: $space-l;
+$hero-padding-block-desktop: $space-xl;
+$hero-claim-gap: 1.75rem;
+$hero-lead-max-width: 40rem;
+$hero-sub-opacity: 0.9;
+$hero-photo-ratio: 4 / 5;
+$hero-photo-width: clamp(32.5rem, 36vw, 48rem);

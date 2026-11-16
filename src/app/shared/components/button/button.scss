@@ -1,0 +1,38 @@
+@use 'variables' as v;
+
+.button {
+  font-family: v.$button-font-family;
+  font-size: v.$button-font-size;
+  font-weight: v.$button-font-weight;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  gap: v.$button-gap;
+  padding: v.$button-padding-block v.$button-padding-inline;
+  border: v.$button-border;
+  border-radius: v.$button-radius;
+  text-decoration: none;
+  transition:
+    background-color v.$transition,
+    color v.$transition;
+
+  &--light {
+    color: v.$button-light-color;
+
+    &:hover,
+    &:focus-visible {
+      background-color: v.$button-light-hover-background;
+      color: v.$button-light-hover-color;
+    }
+  }
+
+  &--dark {
+    color: v.$button-dark-color;
+
+    &:hover,
+    &:focus-visible {
+      background-color: v.$button-dark-hover-background;
+      color: v.$button-dark-hover-color;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<header class="header">
+  <a class="header__logo" routerLink="/">
+    <span class="header__logo-name">S.Sträter</span>
+  </a>
+
+  <nav class="header__nav" aria-label="Main navigation">
+    <ul class="header__list">
+      @for (link of links; track link.fragment) {
+        <li>
+          <a class="header__link" routerLink="/" [fragment]="link.fragment">{{ link.label }}</a>
+        </li>
+      }
+    </ul>
+  </nav>
+
+  <span class="header__timer">Local time {{ localTime.time() }}</span>
+
+  <app-icon-button class="header__menu-button" label="Open menu" icon="menu" (click)="openMenu()" />
+</header>
+<app-mobile-menu [isOpen]="isMenuOpen()" (closed)="closeMenu()" />
