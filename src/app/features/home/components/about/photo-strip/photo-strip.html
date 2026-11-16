@@ -1,0 +1,21 @@
+<section class="photo-strip" aria-label="Photographs">
+  <p class="photo-strip__caption">
+    <span>(Off screen) Photographed by me</span>
+    <span>
+      <span class="photo-strip__hint-touch">Swipe →</span>
+      <span class="photo-strip__hint-mouse">Scroll →</span>
+    </span>
+  </p>
+
+  <ul class="photo-strip__list">
+    @for (photo of photos; track photo.alt) {
+      <li class="photo-strip__item">
+        <figure class="photo-strip__figure" [style.aspect-ratio]="photo.ratio">
+          @if (photo.src) {
+            <img class="photo-strip__image" [src]="photo.src" [alt]="photo.alt" loading="lazy" />
+          }
+        </figure>
+      </li>
+    }
+  </ul>
+</section>
