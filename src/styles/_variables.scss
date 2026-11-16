@@ -124,6 +124,13 @@ $header-logo-size: 1.6rem;
 $header-logo-weight: $font-weight-medium;
 $header-logo-letter-spacing: -0.01em;
 
+$mobile-menu-top: $header-height-mobile;
+$mobile-menu-link-size: $text-h2;
+$mobile-menu-link-gap: $space-m;
+$mobile-menu-link-padding-block: $space-xs;
+$mobile-menu-footer-gap: $space-m;
+$mobile-menu-footer-padding-block: $space-m;
+
 $hero-gap: $space-l;
 $hero-padding-block: $space-l;
 $hero-padding-block-desktop: $space-xl;
