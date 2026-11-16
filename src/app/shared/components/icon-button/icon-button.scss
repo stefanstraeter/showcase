@@ -7,8 +7,7 @@
   width: v.$icon-button-size;
   height: v.$icon-button-size;
   padding: 0;
-  border: v.$icon-button-border;
-  border-radius: v.$radius-pill;
+  border: none;
   background: transparent;
   color: inherit;
   cursor: pointer;
@@ -37,7 +36,6 @@
   }
 
   &--close &__line--bottom {
-    transform: translateY(v.$icon-button-line-offset * -1px)
-      rotate(-1 * v.$icon-button-close-angle);
+    transform: translateY(v.$icon-button-line-offset * -1px) rotate(-1 * v.$icon-button-close-angle);
   }
 }
