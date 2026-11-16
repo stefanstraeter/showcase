@@ -1,4 +1,9 @@
-<div class="mobile-menu" [class.mobile-menu--open]="isOpen()">
+<dialog #dialog class="mobile-menu" aria-label="Menu" (close)="closed.emit()">
+  <header class="mobile-menu__header">
+    <a class="mobile-menu__logo" routerLink="/" (click)="closed.emit()">S.Sträter</a>
+    <app-icon-button label="Close menu" icon="close" (click)="closed.emit()" />
+  </header>
+
   <nav aria-label="Mobile navigation">
     <ul class="mobile-menu__list">
       @for (link of links; track link.fragment; let index = $index) {
@@ -21,10 +26,10 @@
     <ul class="mobile-menu__external">
       @for (link of externalLinks; track link.label) {
         <li>
-          <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} ↗</a>
+          <a [href]="link.url" target="_blank" rel="noopener">{{ link.label }} ↗</a>
         </li>
       }
     </ul>
     <p class="mobile-menu__time">Local time {{ localTime.time() }}</p>
   </footer>
-</div>
+</dialog>
