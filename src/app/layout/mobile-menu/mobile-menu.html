@@ -1,1 +1,30 @@
-<button type="button" [attr.aria-label]="label()"></button>
+<div class="mobile-menu" [class.mobile-menu--open]="isOpen()">
+  <nav aria-label="Mobile navigation">
+    <ul class="mobile-menu__list">
+      @for (link of links; track link.fragment; let index = $index) {
+        <li class="mobile-menu__item" [style.--index]="index">
+          <a
+            class="mobile-menu__link"
+            routerLink="/"
+            [fragment]="link.fragment"
+            (click)="closed.emit()"
+          >
+            <span class="mobile-menu__number">(0{{ index + 1 }})</span>
+            {{ link.label }}
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+
+  <footer class="mobile-menu__footer">
+    <ul class="mobile-menu__external">
+      @for (link of externalLinks; track link.label) {
+        <li>
+          <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} ↗</a>
+        </li>
+      }
+    </ul>
+    <p class="mobile-menu__time">Local time {{ localTime.time() }}</p>
+  </footer>
+</div>

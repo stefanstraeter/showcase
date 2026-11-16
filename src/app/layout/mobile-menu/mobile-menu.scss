@@ -1,0 +1,85 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.mobile-menu {
+  position: fixed;
+  top: v.$mobile-menu-top;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: v.$color-primary;
+  color: v.$color-white;
+  visibility: hidden;
+
+  &--open {
+    visibility: visible;
+  }
+
+  @include m.tablet {
+    display: none;
+  }
+
+  &__list {
+    @include m.content-width;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    border-bottom: v.$border-on-primary;
+  }
+
+  &__link {
+    display: flex;
+    align-items: baseline;
+    gap: v.$mobile-menu-link-gap;
+    padding-block: v.$mobile-menu-link-padding-block;
+    font-family: v.$font-display;
+    font-size: v.$mobile-menu-link-size;
+    line-height: v.$line-height-heading;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__number {
+    @include m.label;
+  }
+
+  &__footer {
+    @include m.content-width;
+    @include m.label;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: v.$mobile-menu-footer-gap;
+    padding-block: v.$mobile-menu-footer-padding-block;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: v.$gutter-mobile;
+      left: v.$gutter-mobile;
+      border-top: v.$border-on-primary;
+    }
+  }
+
+  &__external {
+    display: flex;
+    gap: v.$mobile-menu-footer-gap;
+    margin: 0;
+    list-style: none;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__time {
+    margin: 0 0 0 auto;
+  }
+}
