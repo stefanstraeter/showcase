@@ -10,6 +10,7 @@ $color-surface: #eeeff2;
 $color-tint: #eef0fc;
 $color-white: #ffffff;
 $color-line-soft: #d9dbe3;
+$color-text-muted-on-primary: #ffffff99;
 
 // ==========================================================================
 // TYPOGRAPHY
@@ -128,6 +129,7 @@ $header-link-dimmed-opacity: 0.4;
 $mobile-menu-header-height: $header-height-mobile;
 $mobile-menu-link-size: $text-h2;
 $mobile-menu-link-gap: $space-m;
+$mobile-menu-number-color: $color-text-muted-on-primary;
 $mobile-menu-link-padding-block: $space-xs;
 $mobile-menu-footer-gap: $space-m;
 $mobile-menu-footer-padding-block: $space-m;

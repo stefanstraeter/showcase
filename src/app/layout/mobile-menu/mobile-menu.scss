@@ -80,6 +80,7 @@
 
   &__number {
     @include m.label;
+    color: v.$mobile-menu-number-color;
   }
 
   &__footer {
