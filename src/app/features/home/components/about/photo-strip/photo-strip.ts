@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PHOTOS } from '@features/home/model/constants/photos';
-import { Photo } from '@features/home/model/interfaces/photo';
+import { ABOUT_PHOTOS } from '@features/home/model/constants/about-photos';
+import { AboutPhoto } from '@features/home/model/interfaces/about-photo';
 
 @Component({
   imports: [],
@@ -9,5 +9,5 @@ import { Photo } from '@features/home/model/interfaces/photo';
   templateUrl: './photo-strip.html',
 })
 export class PhotoStrip {
-  readonly photos: Photo[] = PHOTOS;
+  readonly photos: AboutPhoto[] = ABOUT_PHOTOS;
 }
