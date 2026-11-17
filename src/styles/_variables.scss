@@ -165,5 +165,6 @@ $hero-padding-block-desktop: $space-xl;
 $hero-claim-gap: 1.75rem;
 $hero-lead-max-width: 40rem;
 $hero-sub-opacity: 0.9;
-$hero-photo-ratio: 4 / 5;
-$hero-photo-width: clamp(32.5rem, 36vw, 48rem);
+$hero-photo-ratio: 0.8;
+$hero-photo-max-height: calc(100svh - #{$header-height} - 2 * #{$hero-padding-block-desktop});
+$hero-photo-width: min(clamp(32.5rem, 36vw, 48rem), calc(#{$hero-photo-max-height} * #{$hero-photo-ratio}));
