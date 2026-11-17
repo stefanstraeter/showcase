@@ -18,9 +18,7 @@
         <ul class="contact__links">
           @for (link of externalLinks; track link.label) {
             <li class="contact__item">
-              <app-text-link class="contact__link" [url]="link.url">{{
-                link.label
-              }}</app-text-link>
+              <app-text-link class="contact__link" [url]="link.url">{{ link.label }}</app-text-link>
             </li>
           }
         </ul>
@@ -37,5 +35,5 @@
     </div>
   </dl>
 
-  <p class="contact__meta">Based in Tyrol, Austria · Local time {{ localTime.time() }}</p>
+  <p class="contact__time">Local time {{ localTime.time() }}</p>
 </section>

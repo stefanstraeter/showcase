@@ -30,7 +30,7 @@
     }
   }
 
-  &__meta {
+  &__time {
     @include m.label;
     margin: 0;
     color: v.$color-text-muted-on-primary;
