@@ -4,7 +4,7 @@
 
 $color-primary: #2a40d5;
 $color-primary-dark: #1b2a8f;
-$color-ink: #141414;
+$color-ink: #1d1d1d;
 $color-muted: #555555;
 $color-surface: #eeeff2;
 $color-tint: #eef0fc;
@@ -48,7 +48,7 @@ $text-list-mobile: 1.5rem;
 $text-body: 1.0625rem;
 $text-body-mobile: 1rem;
 $text-small: 0.875rem;
-$text-label: 0.875rem;
+$text-label: 0.75rem;
 
 // ==========================================================================
 // SPACING & LAYOUT
@@ -133,14 +133,31 @@ $mobile-menu-number-color: $color-text-muted-on-primary;
 $mobile-menu-link-padding-block: $space-xs;
 $mobile-menu-footer-gap: $space-m;
 $mobile-menu-footer-padding-block: $space-m;
-$mobile-menu-monogram-size: clamp(6rem, 25vh, 14rem);
-$mobile-menu-monogram-opacity: 0.1;
 $mobile-menu-easing: ease-out;
 $mobile-menu-fade-duration: 0.4s;
 $mobile-menu-item-duration: 0.5s;
 $mobile-menu-item-delay: 0.2s;
 $mobile-menu-item-stagger: 0.08s;
 $mobile-menu-item-shift: 1rem;
+
+$section-header-gap: $space-s;
+$section-header-number-opacity: 0.6;
+
+$about-padding-top: $space-2xl;
+$about-padding-top-desktop: $space-3xl;
+$about-padding-bottom: $space-xl;
+$about-padding-bottom-desktop: $space-2xl;
+$about-gap: $space-l;
+$about-column-gap: $space-xl;
+$about-text-max-width: 65ch;
+$about-fact-padding-block: $space-s;
+$about-fact-gap: $space-m;
+$about-fact-label-width: 8rem;
+
+$photo-strip-height: clamp(14rem, 25vw, 24rem);
+$photo-strip-gap: $space-s;
+$photo-strip-caption-gap: $space-s;
+$photo-strip-padding-bottom: $space-2xl;
 
 $hero-gap: $space-l;
 $hero-padding-block: $space-l;

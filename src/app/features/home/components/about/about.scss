@@ -1,0 +1,80 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+:host {
+  display: block;
+}
+
+.about {
+  @include m.content-width;
+  display: grid;
+  gap: v.$about-gap;
+  padding-top: v.$about-padding-top;
+  padding-bottom: v.$about-padding-bottom;
+
+  @include m.desktop {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: v.$about-column-gap;
+    padding-top: v.$about-padding-top-desktop;
+    padding-bottom: v.$about-padding-bottom-desktop;
+  }
+
+  &__header {
+    @include m.desktop {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+  }
+
+  &__emphasis {
+    display: block;
+    color: v.$color-primary;
+  }
+
+  &__text {
+    max-width: v.$about-text-max-width;
+    margin: 0;
+
+    @include m.desktop {
+      grid-column: 2;
+    }
+  }
+
+  &__facts {
+    margin: 0;
+    border-bottom: v.$border-soft;
+
+    @include m.desktop {
+      grid-column: 2;
+    }
+  }
+
+  &__fact {
+    padding-block: v.$about-fact-padding-block;
+    border-top: v.$border-soft;
+
+    @include m.tablet {
+      display: grid;
+      grid-template-columns: v.$about-fact-label-width 1fr;
+      column-gap: v.$about-fact-gap;
+      align-items: baseline;
+    }
+  }
+
+  &__label {
+    @include m.label;
+    color: v.$color-muted;
+  }
+
+  &__value {
+    margin: 0;
+  }
+
+  &__download {
+    justify-self: start;
+
+    @include m.desktop {
+      grid-column: 2;
+    }
+  }
+}

@@ -1,3 +1,21 @@
-<a class="button" [class]="'button--' + variant()" [routerLink]="link()" [fragment]="fragment()">
-  <ng-content />
-</a>
+<ng-template #content><ng-content /></ng-template>
+
+@if (href()) {
+  <a
+    class="button"
+    [class]="'button--' + variant()"
+    [href]="href()"
+    [attr.download]="download() ? '' : null"
+  >
+    <ng-container *ngTemplateOutlet="content" />
+  </a>
+} @else {
+  <a
+    class="button"
+    [class]="'button--' + variant()"
+    [routerLink]="link()"
+    [fragment]="fragment()"
+  >
+    <ng-container *ngTemplateOutlet="content" />
+  </a>
+}
