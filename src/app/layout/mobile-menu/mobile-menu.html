@@ -26,7 +26,7 @@
     <ul class="mobile-menu__external">
       @for (link of externalLinks; track link.label) {
         <li>
-          <a [href]="link.url" target="_blank" rel="noopener">{{ link.label }} ↗</a>
+          <app-text-link [url]="link.url">{{ link.label }}</app-text-link>
         </li>
       }
     </ul>
