@@ -1,0 +1,72 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+:host {
+  display: block;
+  border-top: v.$border-soft;
+}
+
+.tools {
+  @include m.content-width;
+  display: grid;
+  gap: v.$tools-gap;
+  padding-top: v.$tools-padding-top;
+  padding-bottom: v.$tools-padding-bottom;
+
+  @include m.desktop {
+    grid-template-columns: 1fr 2fr;
+    column-gap: v.$tools-column-gap;
+    padding-top: v.$tools-padding-top-desktop;
+    padding-bottom: v.$tools-padding-bottom-desktop;
+  }
+
+  &__list {
+    margin: 0;
+    border-bottom: v.$border-soft;
+  }
+
+  &__row {
+    display: grid;
+    gap: v.$tools-row-gap;
+    padding-block: v.$tools-row-padding-block;
+    border-top: v.$border-soft;
+
+    @include m.tablet {
+      grid-template-columns: v.$tools-category-width 1fr;
+      column-gap: v.$tools-column-gap;
+      align-items: baseline;
+    }
+  }
+
+  &__category {
+    @include m.label;
+    color: v.$color-muted;
+  }
+
+  &__content {
+    margin: 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: v.$tools-item-gap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    font-family: v.$font-display;
+    font-size: v.$text-list-mobile;
+    line-height: v.$line-height-list;
+
+    @include m.tablet {
+      font-size: v.$text-list;
+    }
+
+    &:not(:last-child)::after {
+      content: ',';
+    }
+  }
+}

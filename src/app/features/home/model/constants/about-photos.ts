@@ -1,6 +1,6 @@
-import { Photo } from '@features/home/model/interfaces/photo';
+import { AboutPhoto } from '@features/home/model/interfaces/about-photo';
 
-export const PHOTOS: Photo[] = [
+export const ABOUT_PHOTOS: AboutPhoto[] = [
   { ratio: '3 / 4', alt: 'Photograph 1' },
   { ratio: '3 / 2', alt: 'Photograph 2' },
   { ratio: '4 / 5', alt: 'Photograph 3' },

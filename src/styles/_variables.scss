@@ -154,6 +154,17 @@ $about-fact-padding-block: $space-s;
 $about-fact-gap: $space-m;
 $about-fact-label-width: 8rem;
 
+$tools-padding-top: $space-2xl;
+$tools-padding-top-desktop: $space-3xl;
+$tools-padding-bottom: $space-2xl;
+$tools-padding-bottom-desktop: $space-3xl;
+$tools-gap: $space-l;
+$tools-column-gap: $space-xl;
+$tools-row-padding-block: $space-m;
+$tools-row-gap: $space-xs;
+$tools-category-width: 12rem;
+$tools-item-gap: $space-xs;
+
 $photo-strip-height: clamp(14rem, 25vw, 24rem);
 $photo-strip-gap: $space-s;
 $photo-strip-caption-gap: $space-s;
