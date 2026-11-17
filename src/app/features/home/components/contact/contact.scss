@@ -16,8 +16,8 @@
 
   @include m.desktop {
     @include m.full-screen;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto 1fr;
     column-gap: v.$contact-column-gap;
     padding-top: v.$contact-padding-top-desktop;
     padding-bottom: v.$contact-padding-bottom-desktop;
@@ -52,7 +52,7 @@
     letter-spacing: v.$letter-spacing-hero;
 
     @include m.desktop {
-      grid-column: 1 / -1;
+      grid-column: 1;
       grid-row: 2;
       align-self: center;
     }
@@ -62,24 +62,15 @@
     margin: 0;
 
     @include m.desktop {
-      display: grid;
-      grid-column: 1 / -1;
-      grid-row: 3;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: v.$contact-column-gap;
-      padding-top: v.$contact-group-padding-block;
-      border-top: v.$border-on-primary;
+      grid-column: 2;
+      grid-row: 2;
+      align-self: center;
     }
   }
 
   &__group {
     padding-block: v.$contact-group-padding-block;
     border-top: v.$border-on-primary;
-
-    @include m.desktop {
-      padding-block: 0;
-      border-top: 0;
-    }
   }
 
   &__label {
@@ -129,11 +120,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
-    @include m.desktop {
-      flex-direction: column;
-      gap: 0.25rem;
-    }
   }
 
   &__link {
