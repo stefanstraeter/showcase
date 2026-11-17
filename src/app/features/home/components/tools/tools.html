@@ -1,0 +1,18 @@
+<section class="tools" id="tools">
+  <app-section-header class="tools__header" number="02">Tools</app-section-header>
+
+  <dl class="tools__list">
+    @for (group of groups; track group.category) {
+      <div class="tools__row">
+        <dt class="tools__category">{{ group.category }}</dt>
+        <dd class="tools__content">
+          <ul class="tools__items">
+            @for (tool of group.tools; track tool) {
+              <li class="tools__item">{{ tool }}</li>
+            }
+          </ul>
+        </dd>
+      </div>
+    }
+  </dl>
+</section>
