@@ -1,0 +1,116 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+:host {
+  display: block;
+  background-color: v.$color-primary;
+  color: v.$color-white;
+}
+
+.contact {
+  @include m.content-width;
+  display: grid;
+  gap: v.$contact-gap;
+  padding-top: v.$contact-padding-top;
+  padding-bottom: v.$contact-padding-bottom;
+
+  @include m.desktop {
+    @include m.full-screen;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto 1fr;
+    column-gap: v.$contact-column-gap;
+    padding-top: v.$contact-padding-top-desktop;
+    padding-bottom: v.$contact-padding-bottom-desktop;
+  }
+
+  &__header {
+    @include m.desktop {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+
+  &__time {
+    @include m.label;
+    margin: 0;
+
+    @include m.desktop {
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: end;
+    }
+  }
+
+  &__question {
+    max-width: v.$contact-question-max-width;
+    margin: 0;
+    font-family: v.$font-display;
+    font-size: v.$contact-question-size;
+    font-weight: v.$font-weight-regular;
+    line-height: v.$line-height-heading;
+    letter-spacing: v.$letter-spacing-hero;
+
+    @include m.desktop {
+      grid-column: 1;
+      grid-row: 2;
+      align-self: center;
+    }
+  }
+
+  &__details {
+    margin: 0;
+
+    @include m.desktop {
+      grid-column: 2;
+      grid-row: 2;
+      align-self: center;
+    }
+  }
+
+  &__group {
+    padding-block: v.$contact-group-padding-block;
+    border-top: v.$border-on-primary;
+
+    @include m.desktop {
+      display: grid;
+      grid-template-columns: v.$contact-label-width 1fr;
+      column-gap: v.$contact-group-gap;
+      align-items: baseline;
+    }
+  }
+
+  &__label {
+    @include m.label;
+    margin-bottom: v.$contact-label-gap;
+    color: v.$color-text-muted-on-primary;
+
+    @include m.desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    margin: 0;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: v.$contact-link-gap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    color: inherit;
+    font-family: v.$font-display;
+    font-size: v.$text-list-mobile;
+    line-height: v.$line-height-list;
+    text-decoration: none;
+
+    @include m.tablet {
+      font-size: v.$text-list;
+    }
+  }
+}

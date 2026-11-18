@@ -3,7 +3,6 @@
 
 :host {
   display: block;
-  border-top: v.$border-soft;
 }
 
 .tools {
@@ -14,6 +13,8 @@
   padding-bottom: v.$tools-padding-bottom;
 
   @include m.desktop {
+    @include m.full-screen;
+    align-content: center;
     grid-template-columns: 1fr 2fr;
     column-gap: v.$tools-column-gap;
     padding-top: v.$tools-padding-top-desktop;

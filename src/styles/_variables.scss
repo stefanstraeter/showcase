@@ -165,6 +165,25 @@ $tools-row-gap: $space-xs;
 $tools-category-width: 12rem;
 $tools-item-gap: $space-xs;
 
+$contact-padding-top: $space-2xl;
+$contact-padding-top-desktop: $space-3xl;
+$contact-padding-bottom: $space-2xl;
+$contact-padding-bottom-desktop: $space-3xl;
+$contact-gap: $space-l;
+$contact-column-gap: $space-xl;
+$contact-question-size: clamp(2.25rem, 1.25rem + 5.2vw, 7rem);
+$contact-question-max-width: 52rem;
+$contact-group-padding-block: $space-m;
+$contact-label-gap: $space-xs;
+$contact-label-width: 8rem;
+$contact-group-gap: $space-m;
+$contact-link-gap: $space-m;
+
+$copy-email-hover-opacity: 0.6;
+
+$text-link-line-height: 1px;
+$text-link-line-offset: 0.2rem;
+
 $photo-strip-height: clamp(14rem, 25vw, 24rem);
 $photo-strip-gap: $space-s;
 $photo-strip-caption-gap: $space-s;
@@ -178,4 +197,7 @@ $hero-lead-max-width: 40rem;
 $hero-sub-opacity: 0.9;
 $hero-photo-ratio: 0.8;
 $hero-photo-max-height: calc(100svh - #{$header-height} - 2 * #{$hero-padding-block-desktop});
-$hero-photo-width: min(clamp(32.5rem, 36vw, 48rem), calc(#{$hero-photo-max-height} * #{$hero-photo-ratio}));
+$hero-photo-width: min(
+  clamp(32.5rem, 36vw, 48rem),
+  calc(#{$hero-photo-max-height} * #{$hero-photo-ratio})
+);

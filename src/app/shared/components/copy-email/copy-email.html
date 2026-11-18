@@ -1,0 +1,8 @@
+<button class="copy-email__button" type="button" (click)="copyEmail()">{{ email() }}</button>
+<p class="copy-email__hint" aria-live="polite">
+  @if (isCopied()) {
+    Copied to clipboard
+  } @else {
+    Click to copy
+  }
+</p>

@@ -7,9 +7,10 @@ import { MENU_LINKS } from '@layout/model/constants/menu-links';
 import { ExternalLink } from '@layout/model/interfaces/external-link';
 import { MenuLink } from '@layout/model/interfaces/menu-link';
 import { IconButton } from '@shared/components/icon-button/icon-button';
+import { TextLink } from '@shared/components/text-link/text-link';
 
 @Component({
-  imports: [RouterLink, IconButton],
+  imports: [RouterLink, IconButton, TextLink],
   selector: 'app-mobile-menu',
   styleUrl: './mobile-menu.scss',
   templateUrl: './mobile-menu.html',

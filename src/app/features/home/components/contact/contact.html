@@ -1,0 +1,38 @@
+<section class="contact" id="contact">
+  <app-section-header class="contact__header" number="04">Say <em>hello.</em></app-section-header>
+
+  <p class="contact__question">Looking for a <em>junior developer</em> with an eye for design?</p>
+
+  <dl class="contact__details">
+    <div class="contact__group">
+      <dt class="contact__label">Email</dt>
+      <dd class="contact__content">
+        <app-copy-email [email]="contactEmail" />
+      </dd>
+    </div>
+
+    <div class="contact__group">
+      <dt class="contact__label">Elsewhere</dt>
+      <dd class="contact__content">
+        <ul class="contact__links">
+          @for (link of externalLinks; track link.label) {
+            <li class="contact__item">
+              <app-text-link class="contact__link" [url]="link.url">{{ link.label }}</app-text-link>
+            </li>
+          }
+        </ul>
+      </dd>
+    </div>
+
+    <div class="contact__group">
+      <dt class="contact__label">Resume</dt>
+      <dd class="contact__content">
+        <app-button href="/pdf/CV_Stefan_Straeter.pdf" [download]="true"
+          >Download CV (PDF) ↓</app-button
+        >
+      </dd>
+    </div>
+  </dl>
+
+  <p class="contact__time">Local time {{ localTime.time() }}</p>
+</section>

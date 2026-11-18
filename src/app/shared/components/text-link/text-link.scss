@@ -1,0 +1,29 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.text-link {
+  position: relative;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: calc(-1 * v.$text-link-line-offset);
+    left: 0;
+    height: v.$text-link-line-height;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform v.$transition;
+  }
+
+  @include m.hover-device {
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}

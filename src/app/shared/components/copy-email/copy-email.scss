@@ -1,0 +1,37 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+:host {
+  display: block;
+}
+
+.copy-email {
+  &__button {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font-family: v.$font-display;
+    font-size: v.$text-list-mobile;
+    line-height: v.$line-height-list;
+    text-align: left;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+    transition: opacity v.$transition;
+
+    @include m.tablet {
+      font-size: v.$text-list;
+    }
+
+    @include m.hover-device {
+      &:hover {
+        opacity: v.$copy-email-hover-opacity;
+      }
+    }
+  }
+
+  &__hint {
+    @include m.label;
+    color: v.$color-text-muted-on-primary;
+  }
+}
