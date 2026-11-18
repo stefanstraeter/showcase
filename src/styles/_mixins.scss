@@ -51,3 +51,11 @@
   font-size: $text-h2;
   line-height: $line-height-heading;
 }
+
+@mixin press-scale {
+  @media (prefers-reduced-motion: no-preference) {
+    &:active {
+      transform: scale($press-scale);
+    }
+  }
+}
