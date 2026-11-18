@@ -33,7 +33,6 @@
   &__time {
     @include m.label;
     margin: 0;
-    color: v.$color-text-muted-on-primary;
 
     @include m.desktop {
       grid-column: 2;
@@ -71,12 +70,23 @@
   &__group {
     padding-block: v.$contact-group-padding-block;
     border-top: v.$border-on-primary;
+
+    @include m.desktop {
+      display: grid;
+      grid-template-columns: v.$contact-label-width 1fr;
+      column-gap: v.$contact-group-gap;
+      align-items: baseline;
+    }
   }
 
   &__label {
     @include m.label;
     margin-bottom: v.$contact-label-gap;
     color: v.$color-text-muted-on-primary;
+
+    @include m.desktop {
+      margin-bottom: 0;
+    }
   }
 
   &__content {
@@ -109,7 +119,6 @@
 
   &__hint {
     @include m.label;
-    margin: v.$contact-hint-gap 0 0;
     color: v.$color-text-muted-on-primary;
   }
 
