@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 .icon-button {
   display: inline-flex;
@@ -11,6 +12,9 @@
   background: transparent;
   color: inherit;
   cursor: pointer;
+  transition: transform v.$transition;
+
+  @include m.press-scale;
 
   &__icon {
     width: v.$icon-button-icon-size;

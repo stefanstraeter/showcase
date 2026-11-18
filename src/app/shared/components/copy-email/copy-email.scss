@@ -17,7 +17,11 @@
     text-align: left;
     overflow-wrap: anywhere;
     cursor: pointer;
-    transition: opacity v.$transition;
+    transition:
+      opacity v.$transition,
+      transform v.$transition;
+
+    @include m.press-scale;
 
     @include m.tablet {
       font-size: v.$text-list;

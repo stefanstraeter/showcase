@@ -6,6 +6,10 @@
   color: inherit;
   font: inherit;
   text-decoration: none;
+  display: inline-block;
+  transition: transform v.$transition;
+
+  @include m.press-scale;
 
   &::after {
     content: '';
