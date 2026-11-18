@@ -35,6 +35,13 @@
     }
   }
 
+  &__logo {
+    justify-self: start;
+    transition: transform v.$transition;
+
+    @include m.press-scale;
+  }
+
   &__logo-name {
     font-family: v.$font-display;
     font-size: v.$header-logo-size;
@@ -64,7 +71,12 @@
   }
 
   &__link {
-    transition: opacity v.$transition;
+    display: inline-block;
+    transition:
+      opacity v.$transition,
+      transform v.$transition;
+
+    @include m.press-scale;
   }
 
   &__menu-button {
