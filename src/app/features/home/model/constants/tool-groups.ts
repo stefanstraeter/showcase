@@ -15,5 +15,5 @@ export const TOOL_GROUPS: ToolGroup[] = [
   },
   { category: 'Backend', tools: ['Firebase API', 'Supabase', 'Node.js'] },
   { category: 'Design & Marketing', tools: ['Figma', 'Adobe CC', 'UI/UX design'] },
-  { category: 'Tools', tools: ['Git', 'GitHub', 'VS Code'] },
+  { category: 'Tools', tools: ['Git', 'GitHub', 'VS Code', 'Vite'] },
 ];
