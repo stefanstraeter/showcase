@@ -5,14 +5,27 @@
     @for (project of projects; track project.slug; let i = $index) {
       <li class="work__item">
         <article class="work__project">
-          <span class="work__number">{{ i + 1 }}</span>
-          <h3 class="work__title">{{ project.title }}</h3>
-          <p class="work__subtitle">{{ project.subtitle }}</p>
-          <ul class="work__tech-list">
-            @for (item of project.tech; track item) {
-              <li class="work__tech-item">{{ item }}</li>
-            }
-          </ul>
+          @if (project.screenshot) {
+            <figure class="work__figure">
+              <img
+                class="work__screenshot"
+                [src]="project.screenshot"
+                alt="Screenshot of {{ project.title }}"
+                loading="lazy"
+              />
+            </figure>
+          }
+
+          <a class="work__front" [routerLink]="['/work', project.slug]">
+            <span class="work__number">({{ i + 1 | number: '2.0-0' }})</span>
+            <h3 class="work__title">{{ project.title }}</h3>
+            <p class="work__subtitle">{{ project.subtitle }}</p>
+            <ul class="work__tech-list">
+              @for (item of project.tech; track item) {
+                <li class="work__tech-item">{{ item }}</li>
+              }
+            </ul>
+          </a>
 
           <ul class="work__links">
             <li>
@@ -20,9 +33,6 @@
             </li>
             <li>
               <app-text-link [url]="project.githubUrl">GitHub</app-text-link>
-            </li>
-            <li>
-              <a class="work__links-case" [routerLink]="['/work', project.slug]">Case study →</a>
             </li>
           </ul>
         </article>

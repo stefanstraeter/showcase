@@ -5,9 +5,10 @@ import { PROJECTS } from '@features/home/model/constants/projects';
 import { SectionHeader } from '@shared/components/section-header/section-header';
 import { TextLink } from '@shared/components/text-link/text-link';
 import { RouterLink } from '@angular/router';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
-  imports: [SectionHeader, TextLink, RouterLink],
+  imports: [SectionHeader, TextLink, RouterLink, DecimalPipe],
   selector: 'app-work',
   styleUrl: './work.scss',
   templateUrl: './work.html',

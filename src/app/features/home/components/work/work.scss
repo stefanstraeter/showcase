@@ -1,0 +1,162 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+:host {
+  display: block;
+}
+
+.work {
+  @include m.content-width;
+  display: grid;
+  gap: v.$work-gap;
+  padding-top: v.$work-padding-top;
+  padding-bottom: v.$work-padding-bottom;
+
+  @include m.desktop {
+    @include m.full-screen;
+    align-content: center;
+    padding-top: v.$work-padding-top-desktop;
+    padding-bottom: v.$work-padding-bottom-desktop;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    border-bottom: v.$border;
+    list-style: none;
+  }
+
+  &__item {
+    padding-block: v.$work-row-padding-block;
+    border-top: v.$border;
+  }
+
+  &__project {
+    display: grid;
+    gap: v.$work-project-gap;
+
+    @include m.desktop {
+      grid-template-columns: 1fr auto;
+      column-gap: v.$work-column-gap;
+      align-items: center;
+    }
+  }
+
+  &__figure {
+    margin: 0;
+
+    @include m.desktop {
+      display: none;
+    }
+  }
+
+  &__screenshot {
+    display: block;
+    width: 100%;
+    aspect-ratio: v.$work-screenshot-ratio;
+    border: v.$work-screenshot-border;
+    object-fit: cover;
+  }
+
+  &__front {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: v.$work-project-gap;
+    align-items: baseline;
+    color: inherit;
+    text-decoration: none;
+    transition: transform v.$transition;
+
+    @include m.hover-device {
+      &:hover {
+        transform: translateX(v.$work-hover-shift);
+      }
+    }
+
+    &:focus-visible {
+      transform: translateX(v.$work-hover-shift);
+    }
+
+    @include m.desktop {
+      grid-template-columns: v.$work-number-width 2fr 1fr;
+      grid-template-areas:
+        'number title tech'
+        'number subtitle tech';
+      column-gap: v.$work-column-gap;
+      row-gap: v.$work-heading-gap;
+      align-items: start;
+    }
+  }
+
+  &__subtitle,
+  &__tech-list {
+    grid-column: 1 / -1;
+  }
+
+  &__number {
+    @include m.label;
+    color: v.$color-text-muted;
+
+    @include m.desktop {
+      grid-area: number;
+      align-self: center;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: v.$font-display;
+    font-size: v.$text-h3;
+    font-weight: v.$font-weight-regular;
+    line-height: v.$line-height-heading;
+
+    @include m.desktop {
+      grid-area: title;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+
+    @include m.desktop {
+      grid-area: subtitle;
+      align-self: baseline;
+    }
+  }
+
+  &__tech-list {
+    @include m.label;
+    display: flex;
+    flex-wrap: wrap;
+    gap: v.$work-tech-gap;
+    margin: 0;
+    padding: 0;
+    color: v.$color-text-muted;
+    list-style: none;
+
+    @include m.desktop {
+      grid-area: tech;
+      align-self: center;
+    }
+  }
+
+  &__tech-item {
+    &:not(:last-child)::after {
+      content: ',';
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: v.$work-links-gap;
+    margin: 0;
+    padding: 0;
+    font-size: v.$work-links-size;
+    list-style: none;
+
+    @include m.desktop {
+      flex-direction: column;
+    }
+  }
+}
