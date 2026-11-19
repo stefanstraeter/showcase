@@ -9,6 +9,7 @@ $gray-200: #d9dbe3;
 $white-60: #ffffff99;
 $white-45: #ffffff73;
 $white-6: #ffffff0f;
+$color-accent: #c2552d;
 
 // ==========================================================================
 // COLORS
@@ -55,7 +56,7 @@ $text-transform-label: uppercase;
 $text-hero: clamp(5rem, 10vw, 15rem);
 $text-h2: clamp(3rem, 1.75rem + 2.5vw, 4rem);
 $text-lead: clamp(2.125rem, 0.72rem + 2.81vw, 3.25rem);
-$text-h3: clamp(2.125rem, 1.03rem + 2.19vw, 3rem);
+$text-h3: 1.875rem;
 $text-list: 1.875rem;
 $text-list-mobile: 1.5rem;
 $text-body: 1.0625rem;
@@ -180,6 +181,24 @@ $tools-row-padding-block: $space-m;
 $tools-row-gap: $space-xs;
 $tools-category-width: 12rem;
 $tools-item-gap: $space-xs;
+
+// Work
+$work-padding-top: $space-2xl;
+$work-padding-top-desktop: $space-3xl;
+$work-padding-bottom: $space-2xl;
+$work-padding-bottom-desktop: $space-3xl;
+$work-gap: $space-l;
+$work-project-gap: $space-s;
+$work-heading-gap: $space-xs;
+$work-tech-gap: $space-xs;
+$work-links-gap: $space-xs;
+$work-links-size: $text-small;
+$work-column-gap: $space-xl;
+$work-number-width: 4rem;
+$work-row-padding-block: $space-l;
+$work-hover-shift: $space-s;
+$work-screenshot-ratio: 3 / 2;
+$work-screenshot-border: 2px solid $color-text;
 
 // Contact
 $contact-padding-top: $space-2xl;
