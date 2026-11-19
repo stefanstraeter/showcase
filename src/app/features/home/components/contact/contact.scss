@@ -3,8 +3,8 @@
 
 :host {
   display: block;
-  background-color: v.$color-primary;
-  color: v.$color-white;
+  background-color: v.$color-background-inverse;
+  color: v.$color-text-inverse;
 }
 
 .contact {
@@ -69,7 +69,7 @@
 
   &__group {
     padding-block: v.$contact-group-padding-block;
-    border-top: v.$border-on-primary;
+    border-top: v.$border-inverse;
 
     @include m.desktop {
       display: grid;
@@ -82,7 +82,7 @@
   &__label {
     @include m.label;
     margin-bottom: v.$contact-label-gap;
-    color: v.$color-text-muted-on-primary;
+    color: v.$color-text-muted-inverse;
 
     @include m.desktop {
       margin-bottom: 0;

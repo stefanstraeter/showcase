@@ -9,8 +9,8 @@
   margin: 0;
   padding: 0;
   border: none;
-  background-color: v.$color-primary;
-  color: v.$color-white;
+  background-color: v.$color-background-inverse;
+  color: v.$color-text-inverse;
   overflow-y: auto;
   overscroll-behavior: contain;
 
@@ -43,7 +43,7 @@
       right: v.$gutter-mobile;
       bottom: 0;
       left: v.$gutter-mobile;
-      border-bottom: v.$border-on-primary;
+      border-bottom: v.$border-inverse;
     }
   }
 
@@ -66,7 +66,7 @@
   }
 
   &__item {
-    border-bottom: v.$border-on-primary;
+    border-bottom: v.$border-inverse;
   }
 
   &__link {

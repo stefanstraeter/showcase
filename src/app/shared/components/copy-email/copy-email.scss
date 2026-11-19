@@ -36,6 +36,6 @@
 
   &__hint {
     @include m.label;
-    color: v.$color-text-muted-on-primary;
+    color: v.$color-text-muted-inverse;
   }
 }

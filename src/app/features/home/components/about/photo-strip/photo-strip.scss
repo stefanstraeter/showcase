@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     margin-block: 0 v.$photo-strip-caption-gap;
-    color: v.$color-muted;
+    color: v.$color-text-muted;
   }
 
   &__hint-mouse {
@@ -39,7 +39,7 @@
     overflow-x: auto;
     list-style: none;
     scrollbar-width: thin;
-    scrollbar-color: v.$color-line-soft transparent;
+    scrollbar-color: v.$color-line transparent;
 
     @include m.tablet {
       margin-inline-start: max(v.$gutter, calc((100% - v.$container-width) / 2 + v.$gutter));
@@ -54,7 +54,7 @@
     height: v.$photo-strip-height;
     margin: 0;
     overflow: hidden;
-    background-color: v.$color-surface;
+    background-color: v.$color-line;
   }
 
   &__image {

@@ -23,14 +23,14 @@
 
   &__list {
     margin: 0;
-    border-bottom: v.$border-soft;
+    border-bottom: v.$border;
   }
 
   &__row {
     display: grid;
     gap: v.$tools-row-gap;
     padding-block: v.$tools-row-padding-block;
-    border-top: v.$border-soft;
+    border-top: v.$border;
 
     @include m.tablet {
       grid-template-columns: v.$tools-category-width 1fr;
@@ -41,7 +41,7 @@
 
   &__category {
     @include m.label;
-    color: v.$color-muted;
+    color: v.$color-text-muted;
   }
 
   &__content {

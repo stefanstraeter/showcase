@@ -3,7 +3,7 @@
 
 :host {
   display: block;
-  background-color: v.$color-primary;
+  background-color: v.$color-background-inverse;
 }
 
 .header {
@@ -14,7 +14,7 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   height: v.$header-height-mobile;
-  color: v.$color-white;
+  color: v.$color-text-inverse;
 
   &::after {
     content: '';
@@ -22,7 +22,7 @@
     right: v.$gutter-mobile;
     bottom: 0;
     left: v.$gutter-mobile;
-    border-bottom: v.$border-on-primary;
+    border-bottom: v.$border-inverse;
   }
 
   @include m.tablet {

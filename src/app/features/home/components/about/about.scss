@@ -3,7 +3,7 @@
 
 :host {
   display: block;
-  border-top: v.$border-soft;
+  border-top: v.$border;
 }
 
 .about {
@@ -29,7 +29,7 @@
 
   &__emphasis {
     display: block;
-    color: v.$color-primary;
+    color: v.$color-text;
   }
 
   &__text {
@@ -43,7 +43,7 @@
 
   &__facts {
     margin: 0;
-    border-bottom: v.$border-soft;
+    border-bottom: v.$border;
 
     @include m.desktop {
       grid-column: 2;
@@ -52,7 +52,7 @@
 
   &__fact {
     padding-block: v.$about-fact-padding-block;
-    border-top: v.$border-soft;
+    border-top: v.$border;
 
     @include m.tablet {
       display: grid;
@@ -64,7 +64,7 @@
 
   &__label {
     @include m.label;
-    color: v.$color-muted;
+    color: v.$color-text-muted;
   }
 
   &__value {
