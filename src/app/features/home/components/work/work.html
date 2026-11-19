@@ -1,0 +1,32 @@
+<section class="work" id="work">
+  <app-section-header number="02"> Selected <em>work</em></app-section-header>
+
+  <ul class="work__list">
+    @for (project of projects; track project.slug; let i = $index) {
+      <li class="work__item">
+        <article class="work__project">
+          <span class="work__number">{{ i + 1 }}</span>
+          <h3 class="work__title">{{ project.title }}</h3>
+          <p class="work__subtitle">{{ project.subtitle }}</p>
+          <ul class="work__tech-list">
+            @for (item of project.tech; track item) {
+              <li class="work__tech-item">{{ item }}</li>
+            }
+          </ul>
+
+          <ul class="work__links">
+            <li>
+              <app-text-link [url]="project.liveUrl">Live preview</app-text-link>
+            </li>
+            <li>
+              <app-text-link [url]="project.githubUrl">GitHub</app-text-link>
+            </li>
+            <li>
+              <a class="work__links-case" [routerLink]="['/work', project.slug]">Case study →</a>
+            </li>
+          </ul>
+        </article>
+      </li>
+    }
+  </ul>
+</section>
