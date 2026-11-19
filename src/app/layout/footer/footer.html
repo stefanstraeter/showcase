@@ -1,0 +1,26 @@
+<footer class="footer">
+  <div class="footer__bar">
+    <p class="footer__credit">© 2026 Stefan Sträter · Frontend developer</p>
+    <p class="footer__built">Built with Angular · Lighthouse [score]</p>
+
+    <div class="footer__actions">
+      <nav aria-label="Legal">
+        <ul class="footer__legal">
+          @for (link of legalLinks; track link.path) {
+            <li>
+              <a class="footer__link" [routerLink]="link.path">{{ link.label }}</a>
+            </li>
+          }
+        </ul>
+      </nav>
+
+      <button class="footer__top" type="button" (click)="scrollToTop()">
+        <span class="footer__top-prefix">Back to top ↑</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="footer__name-box">
+    <p class="footer__name" aria-hidden="true">Stefan <em>Sträter</em></p>
+  </div>
+</footer>
