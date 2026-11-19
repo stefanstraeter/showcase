@@ -2,8 +2,7 @@
 // PRIMITIVES
 // ==========================================================================
 
-$color-primary: #2a40d5;
-$color-primary-dark: #1b2a8f;
+$color-primary: #252c34;
 $color-ink: #1d1d1d;
 $color-muted: #555555;
 $color-surface: #eeeff2;
@@ -11,12 +10,14 @@ $color-tint: #eef0fc;
 $color-white: #ffffff;
 $color-line-soft: #d9dbe3;
 $color-text-muted-on-primary: #ffffff99;
+$color-text-ghost-on-primary: #ffffff0f;
 
 // ==========================================================================
 // TYPOGRAPHY
 // ==========================================================================
 
 $font-display: 'Instrument Serif', Georgia, serif;
+$font-logo: 'Satoshi', Georgia, serif;
 $font-body: 'Satoshi', system-ui, sans-serif;
 $font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
@@ -189,6 +190,18 @@ $photo-strip-height: clamp(14rem, 25vw, 24rem);
 $photo-strip-gap: $space-s;
 $photo-strip-caption-gap: $space-s;
 $photo-strip-padding-bottom: $space-2xl;
+
+$footer-gap: $space-s;
+$footer-bar-gap: $space-xs;
+$footer-padding-top: $space-l;
+$footer-name-size-mobile: 33cqw;
+$footer-name-size: 22cqw;
+$footer-name-visible-height-mobile: 1.4em;
+$footer-name-visible-height: 0.6em;
+$footer-name-color: $color-text-ghost-on-primary;
+$footer-link-gap: $space-m;
+$footer-link-min-size: 2.75rem;
+$footer-link-hover-opacity: 0.6;
 
 $hero-gap: $space-l;
 $hero-padding-block: $space-l;
