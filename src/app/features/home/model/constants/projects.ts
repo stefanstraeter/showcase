@@ -8,6 +8,7 @@ export const PROJECTS: Project[] = [
     tech: ['Angular', 'TypeScript', 'SCSS', 'Supabase'],
     liveUrl: 'https://stefanstraeter.github.io/opina/',
     githubUrl: 'https://github.com/stefanstraeter/opina',
+    screenshot: 'img/screenshot-opina.webp',
   },
   {
     slug: 'kanvera',
@@ -16,6 +17,7 @@ export const PROJECTS: Project[] = [
     tech: ['JavaScript (ES6+)', 'CSS', 'Firebase'],
     liveUrl: 'https://stefanstraeter.github.io/kanvera/',
     githubUrl: 'https://github.com/stefanstraeter/kanvera',
+    screenshot: 'img/screenshot-kanvera.webp',
   },
   {
     slug: 'chunky-pairs',
@@ -24,6 +26,7 @@ export const PROJECTS: Project[] = [
     tech: ['JavaScript (ES6+)', 'TypeScript', 'SCSS', 'Vite'],
     liveUrl: 'https://stefanstraeter.github.io/chunky-pairs/',
     githubUrl: 'https://github.com/stefanstraeter/chunky-pairs',
+    screenshot: 'img/screenshot-chunky-pairs.webp',
   },
   {
     slug: 'neon-city-2065',
@@ -32,5 +35,6 @@ export const PROJECTS: Project[] = [
     tech: ['JavaScript (ES6+)', 'CSS', 'HTML5'],
     liveUrl: 'https://stefanstraeter.github.io/neon-city-2065/',
     githubUrl: 'https://github.com/stefanstraeter/neon-city-2065',
+    screenshot: 'img/screenshot-neon-city-2065.webp',
   },
 ];
