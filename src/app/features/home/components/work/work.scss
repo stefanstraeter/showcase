@@ -81,6 +81,7 @@
     gap: v.$work-project-gap;
     align-items: baseline;
     color: inherit;
+    cursor: pointer;
     text-decoration: none;
     transition: transform v.$transition;
 
@@ -174,5 +175,28 @@
     @include m.desktop {
       flex-direction: column;
     }
+  }
+
+  &__preview {
+    display: none;
+
+    @include m.hover-device {
+      display: block;
+      position: fixed;
+      pointer-events: none;
+
+      z-index: v.$work-preview-z-index;
+      width: v.$work-preview-width;
+      margin: 0;
+      transform: translate(v.$work-preview-offset, -50%);
+    }
+  }
+
+  &__preview-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: v.$work-screenshot-ratio;
+    border: v.$work-screenshot-border;
+    object-fit: cover;
   }
 }
