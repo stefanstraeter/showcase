@@ -57,6 +57,7 @@ $text-hero: clamp(5rem, 10vw, 15rem);
 $text-h2: clamp(3rem, 1.75rem + 2.5vw, 4rem);
 $text-lead: clamp(2.125rem, 0.72rem + 2.81vw, 3.25rem);
 $text-h3: 1.875rem;
+$text-number-mobile: 1.5rem;
 $text-list: 1.875rem;
 $text-list-mobile: 1.5rem;
 $text-body: 1.0625rem;
@@ -221,6 +222,7 @@ $copy-email-hover-opacity: 0.6;
 // Text link
 $text-link-line-height: 1px;
 $text-link-line-offset: 0.2rem;
+$text-link-arrow-size: 0.75em;
 
 // Photo strip
 $photo-strip-height: clamp(14rem, 25vw, 24rem);
