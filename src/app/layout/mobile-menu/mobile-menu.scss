@@ -31,6 +31,7 @@
 
   &__header {
     @include m.content-width;
+    @include m.label;
     position: relative;
     display: flex;
     align-items: center;
@@ -43,7 +44,7 @@
       right: v.$gutter-mobile;
       bottom: 0;
       left: v.$gutter-mobile;
-      border-bottom: v.$border;
+      border-bottom: v.$border-soft;
     }
   }
 
@@ -66,7 +67,7 @@
   }
 
   &__item {
-    border-bottom: v.$border;
+    border-bottom: v.$border-soft;
   }
 
   &__link {

@@ -1,7 +1,9 @@
 <dialog #dialog class="mobile-menu" aria-label="Menu" (close)="closed.emit()">
   <header class="mobile-menu__header">
     <a class="mobile-menu__logo" routerLink="/" (click)="closed.emit()">S.Sträter</a>
-    <app-icon-button label="Close menu" icon="close" (click)="closed.emit()" />
+    <app-icon-button label="Close menu" icon="close" (click)="closed.emit()"
+      >Close</app-icon-button
+    >
   </header>
 
   <nav aria-label="Mobile navigation">
