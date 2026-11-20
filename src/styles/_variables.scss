@@ -8,6 +8,7 @@ $sand-200-60: #f6f5f099;
 $sand-200-11: #f6f5f01c;
 $charcoal-800: #2c2e33;
 $charcoal-800-70: #2c2e33b3;
+$charcoal-800-30: #2c2e334d;
 $charcoal-800-11: #2c2e331c;
 $orange-600: #da4818;
 
@@ -19,6 +20,7 @@ $color-background: $sand-200;
 $color-text: $charcoal-800;
 $color-text-muted: $charcoal-800-70;
 $color-line: $charcoal-800;
+$color-line-soft: $charcoal-800-30;
 $color-accent: $orange-600;
 
 $color-background-inverse: $charcoal-800;
@@ -97,6 +99,7 @@ $radius-pill: 999px;
 $radius-image: 0;
 
 $border: 1px solid $color-line;
+$border-soft: 1px solid $color-line-soft;
 $border-inverse: 1px solid $color-line-inverse;
 
 // ==========================================================================
@@ -132,6 +135,7 @@ $icon-button-icon-size: 1.125rem;
 $icon-button-stroke-width: 1.6;
 $icon-button-line-offset: 3;
 $icon-button-close-angle: 45deg;
+$icon-button-gap: $space-xs;
 
 // Header
 $header-height-mobile: 4rem;
