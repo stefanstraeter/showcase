@@ -5,8 +5,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: v.$icon-button-size;
+  min-width: v.$icon-button-size;
   height: v.$icon-button-size;
+  gap: v.$icon-button-gap;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
   padding: 0;
   border: none;
   background: transparent;
