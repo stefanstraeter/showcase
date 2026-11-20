@@ -5,8 +5,6 @@
   &__number {
     @include m.label;
     margin: 0 0 v.$section-header-gap;
-    color: inherit;
-    opacity: v.$section-header-number-opacity;
   }
 
   &__title {

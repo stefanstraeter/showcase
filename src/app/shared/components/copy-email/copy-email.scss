@@ -18,7 +18,7 @@
     overflow-wrap: anywhere;
     cursor: pointer;
     transition:
-      opacity v.$transition,
+      color v.$transition,
       transform v.$transition;
 
     @include m.press-scale;
@@ -29,13 +29,19 @@
 
     @include m.hover-device {
       &:hover {
-        opacity: v.$copy-email-hover-opacity;
+        color: v.$color-accent;
       }
     }
   }
 
   &__hint {
     @include m.label;
-    color: v.$color-text-muted-inverse;
+    color: v.$color-text-muted;
+    transition: color v.$transition;
+
+    &--copied {
+      color: v.$color-accent;
+      font-weight: v.$font-weight-bold;
+    }
   }
 }

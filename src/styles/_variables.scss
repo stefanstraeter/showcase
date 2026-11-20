@@ -3,28 +3,29 @@
 // ==========================================================================
 
 $white: #ffffff;
-$slate-900: #252c34;
-$gray-700: #555555;
-$gray-200: #d9dbe3;
-$white-60: #ffffff99;
-$white-45: #ffffff73;
-$white-6: #ffffff0f;
-$color-accent: #c2552d;
+$sand-200: #f6f5f0;
+$sand-200-60: #f6f5f099;
+$sand-200-11: #f6f5f01c;
+$charcoal-800: #2c2e33;
+$charcoal-800-70: #2c2e33b3;
+$charcoal-800-11: #2c2e331c;
+$orange-600: #da4818;
 
 // ==========================================================================
 // COLORS
 // ==========================================================================
 
-$color-background: $white;
-$color-text: $slate-900;
-$color-text-muted: $gray-700;
-$color-line: $gray-200;
+$color-background: $sand-200;
+$color-text: $charcoal-800;
+$color-text-muted: $charcoal-800-70;
+$color-line: $charcoal-800;
+$color-accent: $orange-600;
 
-$color-background-inverse: $slate-900;
-$color-text-inverse: $white;
-$color-text-muted-inverse: $white-60;
-$color-line-inverse: $white-45;
-$color-decoration-inverse: $white-6;
+$color-background-inverse: $charcoal-800;
+$color-text-inverse: $sand-200;
+$color-text-muted-inverse: $sand-200-60;
+$color-line-inverse: $sand-200-11;
+$color-decoration: $charcoal-800-11;
 
 // ==========================================================================
 // TYPOGRAPHY
@@ -145,7 +146,7 @@ $header-link-dimmed-opacity: 0.4;
 $mobile-menu-header-height: $header-height-mobile;
 $mobile-menu-link-size: $text-h2;
 $mobile-menu-link-gap: $space-m;
-$mobile-menu-number-color: $color-text-muted-inverse;
+$mobile-menu-number-color: $color-text-muted;
 $mobile-menu-link-padding-block: $space-xs;
 $mobile-menu-footer-padding-block: $space-m;
 $mobile-menu-easing: ease-out;
@@ -157,7 +158,6 @@ $mobile-menu-item-shift: 1rem;
 
 // Section header
 $section-header-gap: $space-s;
-$section-header-number-opacity: 0.6;
 
 // About
 $about-padding-top: $space-2xl;
@@ -199,7 +199,7 @@ $work-number-width: 4rem;
 $work-row-padding-block: $space-l;
 $work-hover-shift: $space-m;
 $work-screenshot-ratio: 3 / 2;
-$work-screenshot-border: 2px solid $color-text;
+$work-screenshot-border: 1px solid $color-text-inverse;
 $work-preview-width: 22rem;
 $work-preview-offset: 2rem;
 $work-preview-z-index: 10;
@@ -222,7 +222,6 @@ $contact-group-gap: $space-m;
 $contact-link-gap: $space-m;
 
 // Copy email
-$copy-email-hover-opacity: 0.6;
 
 // Text link
 $text-link-line-height: 1px;
@@ -238,10 +237,11 @@ $photo-strip-padding-bottom: $space-2xl;
 // Footer
 $footer-gap: $space-s;
 $footer-bar-gap: $space-xs;
+$footer-bar-padding-top: $space-s;
 $footer-padding-top: $space-l;
 $footer-name-size: 22cqw;
-$footer-name-visible-height: 0.6em;
-$footer-name-color: $color-decoration-inverse;
+$footer-name-visible-height: 0.55em;
+$footer-name-color: $color-decoration;
 $footer-link-gap: $space-m;
 $footer-link-min-size: 2.75rem;
 $footer-link-hover-opacity: 0.6;

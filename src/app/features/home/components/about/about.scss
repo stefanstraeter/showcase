@@ -3,6 +3,7 @@
 
 :host {
   display: block;
+  background-color: v.$color-background;
 }
 
 .about {
@@ -28,7 +29,6 @@
 
   &__emphasis {
     display: block;
-    color: v.$color-text;
   }
 
   &__text {

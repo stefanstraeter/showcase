@@ -22,6 +22,7 @@
     transform: scaleX(0);
     transform-origin: right;
     transition: transform v.$transition;
+    color: v.$color-accent;
   }
 
   @include m.hover-device {

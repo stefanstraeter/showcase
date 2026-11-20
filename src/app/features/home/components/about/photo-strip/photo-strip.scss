@@ -7,6 +7,7 @@
 
 .photo-strip {
   padding-bottom: v.$photo-strip-padding-bottom;
+  background-color: v.$color-background;
 
   &__caption {
     @include m.content-width;
