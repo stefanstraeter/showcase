@@ -17,79 +17,190 @@
   @include m.content-width;
   flex: 1;
   display: grid;
-  gap: v.$hero-gap;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'info info'
+    'title title'
+    'figure figure'
+    'name name'
+    'scroll tagline';
+  align-content: start;
   padding-top: v.$hero-padding-block;
   padding-bottom: v.$hero-padding-block;
 
   @include m.desktop {
-    grid-template-columns: 1fr v.$hero-photo-width;
-    grid-template-rows: 1fr auto;
-    column-gap: v.$gutter;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: none;
+    align-content: stretch;
     padding-top: v.$hero-padding-block-desktop;
     padding-bottom: v.$hero-padding-block-desktop;
   }
 
-  &__title {
+  &__info {
+    @include m.label;
+    grid-area: info;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include m.desktop {
+      grid-area: 1 / 9 / 2 / -1;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
+
+  &__index,
+  &__meta {
     margin: 0;
+  }
+
+  &__meta {
+    text-align: right;
+  }
+
+  &__meta-label {
+    display: none;
+
+    @include m.desktop {
+      display: inline;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: v.$hero-title-z-index;
+    grid-area: title;
+    margin: v.$hero-gap 0 0;
     font-family: v.$font-display;
     font-weight: v.$font-weight-regular;
     font-size: v.$text-hero;
     line-height: v.$line-height-tight;
     letter-spacing: v.$letter-spacing-hero;
-    align-self: center;
 
     @include m.desktop {
-      grid-column: 1;
-      grid-row: 1;
+      grid-area: 1 / 1 / 2 / 9;
+      margin: 0;
+      font-size: v.$text-hero-desktop;
+    }
+
+    em {
+      display: block;
     }
   }
 
   &__figure {
-    margin: 0;
+    grid-area: figure;
+    width: v.$hero-photo-width-mobile;
+    margin: (-1 * v.$hero-photo-overlap) 0 0;
 
     @include m.desktop {
-      grid-column: 2;
-      grid-row: 1 / -1;
-      align-self: end;
+      grid-area: 2 / 1 / 3 / -1;
+      width: v.$hero-photo-width-desktop;
     }
   }
 
   &__photo {
     display: block;
     width: 100%;
-    aspect-ratio: v.$hero-photo-ratio;
+    aspect-ratio: v.$hero-photo-ratio-mobile;
     object-fit: cover;
+    object-position: v.$hero-photo-position;
     border-radius: v.$radius-image;
-  }
 
-  &__claim {
     @include m.desktop {
-      grid-column: 1;
-      grid-row: 2;
-    }
-
-    hr {
-      margin: 0 0 v.$hero-claim-gap;
-      border: 0;
-      border-top: v.$border;
-    }
-
-    app-button {
-      display: inline-block;
-      margin-top: v.$hero-claim-gap;
+      aspect-ratio: v.$hero-photo-ratio-desktop;
     }
   }
 
-  &__lead {
-    max-width: v.$hero-lead-max-width;
-    margin: 0;
+  &__caption {
+    @include m.label;
+    display: flex;
+    justify-content: space-between;
+    margin-top: v.$hero-caption-gap;
+  }
+
+  &__caption-number {
+    color: v.$color-accent;
+  }
+
+  &__name {
+    grid-area: name;
+    margin: v.$hero-gap 0 0;
     font-family: v.$font-display;
-    font-size: v.$text-lead;
-    line-height: v.$line-height-heading;
+    font-weight: v.$font-weight-regular;
+    font-size: v.$text-name;
+    line-height: v.$line-height-tight;
+    letter-spacing: v.$letter-spacing-hero;
+    text-align: right;
+
+    @include m.desktop {
+      grid-area: 4 / 7 / 5 / -1;
+      align-self: end;
+      margin: 0;
+      font-size: v.$text-name-desktop;
+    }
+
+    em {
+      display: block;
+      color: inherit;
+    }
   }
 
-  &__sub {
-    margin: v.$space-s 0 0;
-    opacity: v.$hero-sub-opacity;
+  &__tagline {
+    @include m.label-uppercase;
+    grid-area: tagline;
+    align-self: end;
+    margin: v.$hero-gap 0 0;
+    line-height: v.$line-height-body;
+    text-align: right;
+
+    @include m.desktop {
+      grid-area: 4 / 3 / 5 / 7;
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  &__scroll {
+    grid-area: scroll;
+    align-self: end;
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: v.$hero-scroll-size;
+    height: v.$hero-scroll-size;
+    color: v.$color-accent;
+    transition: transform v.$transition;
+
+    @include m.press-scale;
+
+    @include m.desktop {
+      grid-area: 4 / 1 / 5 / 3;
+    }
+  }
+
+  &__scroll-icon {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: v.$hero-scroll-stroke-width;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform v.$transition;
+  }
+
+  &__scroll:focus-visible &__scroll-icon {
+    transform: translateY(v.$hero-scroll-hover-shift);
+  }
+
+  @include m.hover-device {
+    &__scroll:hover &__scroll-icon {
+      transform: translateY(v.$hero-scroll-hover-shift);
+    }
   }
 }
