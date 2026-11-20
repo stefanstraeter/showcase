@@ -52,6 +52,15 @@
   line-height: $line-height-heading;
 }
 
+@mixin display-number {
+  font-family: $font-display;
+  font-size: $text-number-mobile;
+
+  @include desktop {
+    font-size: $text-h2;
+  }
+}
+
 @mixin press-scale {
   @media (prefers-reduced-motion: no-preference) {
     &:active {

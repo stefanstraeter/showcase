@@ -30,4 +30,8 @@
       transform-origin: left;
     }
   }
+
+  &__arrow {
+    font-size: v.$text-link-arrow-size;
+  }
 }

@@ -1,0 +1,55 @@
+<section class="work" id="work">
+  <header class="work__header">
+    <app-section-header number="02"> Selected <em>work</em></app-section-header>
+    <p class="work__hint">Hover a project</p>
+  </header>
+
+  <ul class="work__list" (mousemove)="moveCursor($event)" (mouseleave)="hidePreview()">
+    @for (project of projects; track project.slug; let i = $index) {
+      <li class="work__item">
+        <article class="work__project">
+          @if (project.screenshot) {
+            <figure class="work__figure">
+              <img
+                class="work__screenshot"
+                [src]="project.screenshot"
+                alt="Screenshot of {{ project.title }}"
+                loading="lazy"
+              />
+            </figure>
+          }
+
+          <a
+            class="work__front"
+            [routerLink]="['/work', project.slug]"
+            (mouseenter)="showPreview(project)"
+          >
+            <span class="work__number">{{ i + 1 | number: '2.0-0' }}</span>
+            <h3 class="work__title">{{ project.title }}</h3>
+            <p class="work__subtitle">{{ project.subtitle }}</p>
+            <ul class="work__tech-list">
+              @for (item of project.tech; track item) {
+                <li class="work__tech-item">{{ item }}</li>
+              }
+            </ul>
+          </a>
+
+          <ul class="work__links" (mouseenter)="hidePreview()">
+            <li>
+              <app-text-link [url]="project.liveUrl">Live preview</app-text-link>
+            </li>
+            <li>
+              <app-text-link [url]="project.githubUrl">GitHub</app-text-link>
+            </li>
+          </ul>
+        </article>
+      </li>
+    }
+  </ul>
+
+  @if (activeProject()?.screenshot; as screenshot) {
+    <figure class="work__preview" [style.left.px]="cursorX()" [style.top.px]="cursorY()">
+      <img class="work__preview-image" [src]="screenshot" alt="" />
+    </figure>
+  }
+</section>
