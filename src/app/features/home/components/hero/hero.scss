@@ -5,8 +5,8 @@
   display: flex;
   flex-direction: column;
   min-height: calc(100svh - v.$header-height-mobile);
-  background-color: v.$color-background-inverse;
-  color: v.$color-text-inverse;
+  background-color: v.$color-background;
+  color: v.$color-text;
 
   @include m.tablet {
     min-height: calc(100svh - v.$header-height);
@@ -71,7 +71,7 @@
     hr {
       margin: 0 0 v.$hero-claim-gap;
       border: 0;
-      border-top: v.$border-inverse;
+      border-top: v.$border;
     }
 
     app-button {

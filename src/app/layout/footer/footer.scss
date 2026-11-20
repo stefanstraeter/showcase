@@ -3,8 +3,8 @@
 
 :host {
   display: block;
-  background-color: v.$color-background-inverse;
-  color: v.$color-text-inverse;
+  background-color: v.$color-background;
+  color: v.$color-text;
 }
 
 .footer {
@@ -15,8 +15,25 @@
   &__bar {
     @include m.content-width;
     @include m.label;
+    position: relative;
     display: grid;
     gap: v.$footer-bar-gap;
+    padding-top: v.$footer-bar-padding-top;
+    justify-items: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: v.$gutter-mobile;
+      left: v.$gutter-mobile;
+      border-top: v.$border;
+
+      @include m.tablet {
+        right: v.$gutter;
+        left: v.$gutter;
+      }
+    }
 
     @include m.desktop {
       grid-template-columns: 1fr auto 1fr;
@@ -107,5 +124,9 @@
     letter-spacing: v.$letter-spacing-hero;
     text-align: center;
     white-space: nowrap;
+
+    em {
+      color: inherit;
+    }
   }
 }

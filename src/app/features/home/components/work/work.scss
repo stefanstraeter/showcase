@@ -3,6 +3,8 @@
 
 :host {
   display: block;
+  background-color: v.$color-background-inverse;
+  color: v.$color-text-inverse;
 }
 
 .work {
@@ -27,7 +29,7 @@
 
   &__hint {
     @include m.label;
-    color: v.$color-text-muted;
+    color: v.$color-text-muted-inverse;
     margin: 0;
     display: none;
 
@@ -39,13 +41,13 @@
   &__list {
     margin: 0;
     padding: 0;
-    border-bottom: v.$border;
+    border-bottom: v.$border-inverse;
     list-style: none;
   }
 
   &__item {
     padding-block: v.$work-row-padding-block;
-    border-top: v.$border;
+    border-top: v.$border-inverse;
   }
 
   &__project {
@@ -113,6 +115,7 @@
 
   &__number {
     @include m.display-number;
+    color: v.$color-accent;
 
     @include m.desktop {
       grid-area: number;
@@ -148,7 +151,7 @@
     gap: v.$work-tech-gap;
     margin: 0;
     padding: 0;
-    color: v.$color-text-muted;
+    color: v.$color-text-muted-inverse;
     list-style: none;
 
     @include m.desktop {
