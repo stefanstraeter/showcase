@@ -41,6 +41,10 @@
   font-size: $text-label;
   font-weight: $font-weight-medium;
   letter-spacing: $letter-spacing-label;
+}
+
+@mixin label-uppercase {
+  @include label;
   text-transform: $text-transform-label;
 }
 

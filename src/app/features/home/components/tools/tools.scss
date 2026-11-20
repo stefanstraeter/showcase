@@ -41,7 +41,7 @@
   }
 
   &__category {
-    @include m.label;
+    @include m.label-uppercase;
     color: v.$color-text-muted;
   }
 
