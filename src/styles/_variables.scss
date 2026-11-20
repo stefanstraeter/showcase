@@ -57,6 +57,9 @@ $letter-spacing-hero: -0.02em;
 $text-transform-label: uppercase;
 
 $text-hero: clamp(5rem, 10vw, 15rem);
+$text-name: clamp(3.25rem, 6.5vw, 9.75rem);
+$text-hero-desktop: clamp(5rem, min(10vw, 15svh), 15rem);
+$text-name-desktop: calc(#{$text-hero-desktop} * 0.65);
 $text-h2: clamp(3rem, 1.75rem + 2.5vw, 4rem);
 $text-lead: clamp(2.125rem, 0.72rem + 2.81vw, 3.25rem);
 $text-h3: 1.875rem;
@@ -252,14 +255,16 @@ $footer-link-hover-opacity: 0.6;
 
 // Hero
 $hero-gap: $space-l;
+$hero-caption-gap: $space-xs;
+$hero-photo-width-mobile: 84%;
+$hero-photo-ratio-mobile: 5 / 4;
+$hero-photo-overlap: 0.5rem;
+$hero-title-z-index: 1;
+$hero-scroll-size: 2.75rem;
+$hero-scroll-stroke-width: 1.5;
+$hero-scroll-hover-shift: 0.25rem;
 $hero-padding-block: $space-l;
 $hero-padding-block-desktop: $space-xl;
-$hero-claim-gap: 1.75rem;
-$hero-lead-max-width: 40rem;
-$hero-sub-opacity: 0.9;
-$hero-photo-ratio: 0.8;
-$hero-photo-max-height: calc(100svh - #{$header-height} - 2 * #{$hero-padding-block-desktop});
-$hero-photo-width: min(
-  clamp(32.5rem, 36vw, 48rem),
-  calc(#{$hero-photo-max-height} * #{$hero-photo-ratio})
-);
+$hero-photo-width-desktop: calc(#{$text-hero-desktop} * 5);
+$hero-photo-ratio-desktop: 7 / 3;
+$hero-photo-position: center 25%;
