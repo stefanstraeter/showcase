@@ -197,9 +197,14 @@ $work-links-size: $text-small;
 $work-column-gap: $space-xl;
 $work-number-width: 4rem;
 $work-row-padding-block: $space-l;
-$work-hover-shift: $space-s;
+$work-hover-shift: $space-m;
 $work-screenshot-ratio: 3 / 2;
 $work-screenshot-border: 2px solid $color-text;
+$work-preview-width: 22rem;
+$work-preview-offset: 2rem;
+$work-preview-z-index: 10;
+$work-preview-z-index: 99;
+$work-preview-offset: -50%;
 
 // Contact
 $contact-padding-top: $space-2xl;
