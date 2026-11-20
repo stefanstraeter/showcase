@@ -28,7 +28,7 @@
   padding-top: v.$hero-padding-block;
   padding-bottom: v.$hero-padding-block;
 
-  @include m.desktop {
+  @include m.desktop-landscape {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto auto 1fr auto;
     grid-template-areas: none;
@@ -44,7 +44,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    @include m.desktop {
+    @include m.desktop-landscape {
       grid-area: 1 / 9 / 2 / -1;
       flex-direction: column;
       align-items: flex-end;
@@ -64,7 +64,7 @@
   &__meta-label {
     display: none;
 
-    @include m.desktop {
+    @include m.desktop-landscape {
       display: inline;
     }
   }
@@ -80,7 +80,7 @@
     line-height: v.$line-height-tight;
     letter-spacing: v.$letter-spacing-hero;
 
-    @include m.desktop {
+    @include m.desktop-landscape {
       grid-area: 1 / 1 / 2 / 9;
       margin: 0;
       font-size: v.$text-hero-desktop;
@@ -96,7 +96,7 @@
     width: v.$hero-photo-width-mobile;
     margin: (-1 * v.$hero-photo-overlap) 0 0;
 
-    @include m.desktop {
+    @include m.desktop-landscape {
       grid-area: 2 / 1 / 3 / -1;
       width: v.$hero-photo-width-desktop;
     }
@@ -110,7 +110,7 @@
     object-position: v.$hero-photo-position;
     border-radius: v.$radius-image;
 
-    @include m.desktop {
+    @include m.desktop-landscape {
       aspect-ratio: v.$hero-photo-ratio-desktop;
     }
   }
@@ -136,7 +136,7 @@
     letter-spacing: v.$letter-spacing-hero;
     text-align: right;
 
-    @include m.desktop {
+    @include m.desktop-landscape {
       grid-area: 4 / 7 / 5 / -1;
       align-self: end;
       margin: 0;
@@ -157,7 +157,7 @@
     line-height: v.$line-height-body;
     text-align: right;
 
-    @include m.desktop {
+    @include m.desktop-landscape {
       grid-area: 4 / 3 / 5 / 7;
       margin: 0;
       text-align: left;
@@ -178,7 +178,7 @@
 
     @include m.press-scale;
 
-    @include m.desktop {
+    @include m.desktop-landscape {
       grid-area: 4 / 1 / 5 / 3;
     }
   }
