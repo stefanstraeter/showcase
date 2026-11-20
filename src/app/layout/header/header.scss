@@ -22,7 +22,7 @@
     right: v.$gutter-mobile;
     bottom: 0;
     left: v.$gutter-mobile;
-    border-bottom: v.$border;
+    border-bottom: v.$border-soft;
   }
 
   @include m.tablet {
@@ -47,7 +47,6 @@
     font-size: v.$header-logo-size;
     font-weight: v.$header-logo-weight;
     letter-spacing: v.$header-logo-letter-spacing;
-    text-transform: none;
   }
 
   &__nav {
@@ -85,11 +84,11 @@
     }
   }
 
-  &__timer {
+  &__download {
     display: none;
 
     @include m.tablet {
-      display: inline;
+      display: block;
       justify-self: end;
     }
   }

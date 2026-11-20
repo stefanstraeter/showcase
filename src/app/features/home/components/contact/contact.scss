@@ -80,7 +80,7 @@
   }
 
   &__label {
-    @include m.label;
+    @include m.label-uppercase;
     margin-bottom: v.$contact-label-gap;
     color: v.$color-text-muted;
 

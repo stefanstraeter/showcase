@@ -1,22 +1,20 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { LocalTime } from '@core/services/local-time';
 import { MobileMenu } from '@layout/mobile-menu/mobile-menu';
 import { IconButton } from '@shared/components/icon-button/icon-button';
 import { MENU_LINKS } from '@layout/model/constants/menu-links';
 import { MenuLink } from '@layout/model/interfaces/menu-link';
+import { Button } from '@shared/components/button/button';
 
 @Component({
-  imports: [RouterLink, IconButton, MobileMenu],
+  imports: [RouterLink, IconButton, MobileMenu, Button],
   selector: 'app-header',
   styleUrl: './header.scss',
   templateUrl: './header.html',
 })
 export class Header {
-  protected readonly localTime = inject(LocalTime);
   readonly links: MenuLink[] = MENU_LINKS;
-
   isMenuOpen = signal<boolean>(false);
 
   /**

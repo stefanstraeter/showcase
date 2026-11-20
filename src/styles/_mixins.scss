@@ -12,6 +12,12 @@
   }
 }
 
+@mixin desktop-landscape {
+  @media (min-width: $breakpoint-desktop) and (min-aspect-ratio: 1 / 1) {
+    @content;
+  }
+}
+
 @mixin hover-device {
   @media (hover: hover) and (pointer: fine) {
     @content;
@@ -41,6 +47,10 @@
   font-size: $text-label;
   font-weight: $font-weight-medium;
   letter-spacing: $letter-spacing-label;
+}
+
+@mixin label-uppercase {
+  @include label;
   text-transform: $text-transform-label;
 }
 

@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
-import { Button } from '@shared/components/button/button';
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { LocalTime } from '@core/services/local-time';
 
 @Component({
-  imports: [Button],
+  imports: [RouterLink],
   selector: 'app-hero',
   styleUrl: './hero.scss',
   templateUrl: './hero.html',
 })
-export class Hero {}
+export class Hero {
+  protected readonly localTime = inject(LocalTime);
+}

@@ -27,7 +27,7 @@
       top: 0;
       right: v.$gutter-mobile;
       left: v.$gutter-mobile;
-      border-top: v.$border;
+      border-top: v.$border-soft;
 
       @include m.tablet {
         right: v.$gutter;

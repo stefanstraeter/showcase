@@ -13,8 +13,16 @@
     </ul>
   </nav>
 
-  <span class="header__timer">Local time {{ localTime.time() }}</span>
+  <app-button
+    class="header__download"
+    href="/pdf/CV_Stefan_Straeter.pdf"
+    [download]="true"
+    variant="dark"
+    >Download CV ↓</app-button
+  >
 
-  <app-icon-button class="header__menu-button" label="Open menu" icon="menu" (click)="openMenu()" />
+  <app-icon-button class="header__menu-button" label="Open menu" icon="menu" (click)="openMenu()"
+    >Menu</app-icon-button
+  >
 </header>
 <app-mobile-menu [isOpen]="isMenuOpen()" (closed)="closeMenu()" />
