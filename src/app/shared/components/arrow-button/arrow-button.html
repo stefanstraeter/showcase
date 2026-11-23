@@ -1,27 +1,28 @@
-<ng-template #icon>
+<ng-template #content>
   <svg class="arrow-button__icon" viewBox="0 0 24 24" aria-hidden="true">
     <path d="M12 3v17M5 13l7 7 7-7" />
   </svg>
+  <ng-content />
 </ng-template>
 
 @if (link()) {
   <a
     class="arrow-button"
-    [class]="'arrow-button--' + direction()"
+    [class]="'arrow-button--' + direction() + ' arrow-button--' + size()"
     [routerLink]="link()"
     [fragment]="fragment()"
     [attr.aria-label]="label()"
   >
-    <ng-container *ngTemplateOutlet="icon" />
+    <ng-container *ngTemplateOutlet="content" />
   </a>
 } @else {
   <button
     class="arrow-button"
-    [class]="'arrow-button--' + direction()"
+    [class]="'arrow-button--' + direction() + ' arrow-button--' + size()"
     type="button"
     (click)="pressed.emit()"
     [attr.aria-label]="label()"
   >
-    <ng-container *ngTemplateOutlet="icon" />
+    <ng-container *ngTemplateOutlet="content" />
   </button>
 }

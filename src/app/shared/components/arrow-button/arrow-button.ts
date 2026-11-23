@@ -10,6 +10,7 @@ import { RouterLink } from '@angular/router';
 })
 export class ArrowButton {
   direction = input<'up' | 'down'>('down');
+  size = input<'small' | 'large'>('large');
   link = input<string>();
   label = input.required<string>();
   fragment = input<string>();
