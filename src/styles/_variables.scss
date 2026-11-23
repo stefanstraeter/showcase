@@ -116,6 +116,11 @@ $press-scale: 0.95;
 // COMPONENT
 // ==========================================================================
 
+// Arrow button
+$arrow-button-size: 3.75rem;
+$arrow-button-stroke-width: 1.8;
+$arrow-button-hover-shift: 0.25rem;
+
 // Button
 $button-padding-block: 0.6rem;
 $button-padding-inline: 1.25rem;
@@ -258,9 +263,6 @@ $hero-gap: $space-l;
 $hero-caption-gap: $space-xs;
 $hero-photo-width-mobile: 84%;
 $hero-photo-ratio-mobile: 5 / 4;
-$hero-scroll-size: 3.75rem;
-$hero-scroll-stroke-width: 1.8;
-$hero-scroll-hover-shift: 0.25rem;
 $hero-padding-block: $space-l;
 $hero-padding-block-desktop: $space-xl;
 $hero-photo-width-desktop: calc(#{$text-hero-desktop} * 5);

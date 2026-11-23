@@ -1,0 +1,51 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.arrow-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: v.$arrow-button-size;
+  height: v.$arrow-button-size;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: v.$color-accent;
+  cursor: pointer;
+  transition: transform v.$transition;
+
+  @include m.press-scale;
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: v.$arrow-button-stroke-width;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform v.$transition;
+  }
+
+  &--up &__icon {
+    transform: rotate(180deg);
+  }
+
+  &--down:focus-visible &__icon {
+    transform: translateY(v.$arrow-button-hover-shift);
+  }
+
+  &--up:focus-visible &__icon {
+    transform: rotate(180deg) translateY(v.$arrow-button-hover-shift);
+  }
+
+  @include m.hover-device {
+    &--down:hover &__icon {
+      transform: translateY(v.$arrow-button-hover-shift);
+    }
+
+    &--up:hover &__icon {
+      transform: rotate(180deg) translateY(v.$arrow-button-hover-shift);
+    }
+  }
+}
