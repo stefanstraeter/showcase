@@ -14,9 +14,7 @@
         </ul>
       </nav>
 
-      <button class="footer__top" type="button" (click)="scrollToTop()">
-        <span class="footer__top-prefix">Back to top ↑</span>
-      </button>
+      <app-arrow-button direction="up" label="Back to top" (pressed)="scrollToTop()" />
     </div>
   </div>
 

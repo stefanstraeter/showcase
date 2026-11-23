@@ -71,8 +71,7 @@
     list-style: none;
   }
 
-  &__link,
-  &__top {
+  &__link {
     display: inline-flex;
     align-items: center;
     min-height: v.$footer-link-min-size;
@@ -88,22 +87,6 @@
       &:hover {
         opacity: v.$footer-link-hover-opacity;
       }
-    }
-  }
-
-  &__top {
-    @include m.label;
-    padding: 0;
-    border: 0;
-    background: none;
-    cursor: pointer;
-  }
-
-  &__top-prefix {
-    display: none;
-
-    @include m.tablet {
-      display: inline;
     }
   }
 
