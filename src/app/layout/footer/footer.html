@@ -1,24 +1,49 @@
 <footer class="footer">
-  <div class="footer__bar">
-    <p class="footer__credit">© 2026 Stefan Sträter · Frontend developer</p>
-    <p class="footer__built">Built with Angular · Lighthouse [score]</p>
+  <div class="footer__main">
+    <section class="footer__colophon" aria-labelledby="footer-colophon">
+      <h2 class="footer__label footer__label--accent" id="footer-colophon">Colophon</h2>
+      <p class="footer__text">
+        Designed and built by me in Tyrol. Set in Instrument Serif, JetBrains Mono and Satoshi.
+        Photographs
+        <em>by me</em>, too.
+      </p>
+    </section>
 
-    <div class="footer__actions">
-      <nav aria-label="Legal">
-        <ul class="footer__legal">
-          @for (link of legalLinks; track link.path) {
-            <li>
-              <a class="footer__link" [routerLink]="link.path">{{ link.label }}</a>
-            </li>
-          }
-        </ul>
-      </nav>
+    <nav class="footer__group" aria-labelledby="footer-elsewhere">
+      <h2 class="footer__label" id="footer-elsewhere">Elsewhere</h2>
+      <ul class="footer__list">
+        @for (link of externalLinks; track link.url) {
+          <li class="footer__item">
+            <app-text-link [url]="link.url">{{ link.label }}</app-text-link>
+          </li>
+        }
+      </ul>
+    </nav>
 
-      <app-arrow-button direction="up" label="Back to top" (pressed)="scrollToTop()" />
-    </div>
+    <nav class="footer__group" aria-labelledby="footer-legal">
+      <h2 class="footer__label" id="footer-legal">Legal</h2>
+      <ul class="footer__list">
+        @for (link of legalLinks; track link.path) {
+          <li class="footer__item">
+            <app-text-link [link]="link.path">{{ link.label }}</app-text-link>
+          </li>
+        }
+      </ul>
+    </nav>
   </div>
 
-  <div class="footer__name-box">
-    <p class="footer__name" aria-hidden="true">Stefan <em>Sträter</em></p>
+  <div class="footer__bar">
+    <p class="footer__credit">© 2026 Stefan Sträter</p>
+    <p class="footer__built">Built with Angular · Lighthouse [score]</p>
+    <app-arrow-button
+      class="footer__top"
+      direction="up"
+      size="small"
+      label="Back to top"
+      (pressed)="scrollToTop()"
+    >
+      <span class="footer__top-short">Top</span>
+      <span class="footer__top-long">Back to top</span>
+    </app-arrow-button>
   </div>
 </footer>
