@@ -48,7 +48,7 @@
       grid-area: 1 / 9 / 2 / -1;
       flex-direction: column;
       align-items: flex-end;
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
   }
 
@@ -70,8 +70,6 @@
   }
 
   &__title {
-    position: relative;
-    z-index: v.$hero-title-z-index;
     grid-area: title;
     margin: v.$hero-gap 0 0;
     font-family: v.$font-display;
@@ -94,11 +92,11 @@
   &__figure {
     grid-area: figure;
     width: v.$hero-photo-width-mobile;
-    margin: (-1 * v.$hero-photo-overlap) 0 0;
 
     @include m.desktop-landscape {
       grid-area: 2 / 1 / 3 / -1;
       width: v.$hero-photo-width-desktop;
+      margin-top: v.$hero-gap;
     }
   }
 
@@ -158,7 +156,7 @@
     text-align: right;
 
     @include m.desktop-landscape {
-      grid-area: 4 / 3 / 5 / 7;
+      grid-area: 4 / 2 / 5 / 7;
       margin: 0;
       text-align: left;
     }
