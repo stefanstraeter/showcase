@@ -166,39 +166,9 @@
     grid-area: scroll;
     align-self: end;
     justify-self: start;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: v.$hero-scroll-size;
-    height: v.$hero-scroll-size;
-    color: v.$color-accent;
-    transition: transform v.$transition;
-
-    @include m.press-scale;
 
     @include m.desktop-landscape {
       grid-area: 4 / 1 / 5 / 3;
-    }
-  }
-
-  &__scroll-icon {
-    width: 100%;
-    height: 100%;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: v.$hero-scroll-stroke-width;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: transform v.$transition;
-  }
-
-  &__scroll:focus-visible &__scroll-icon {
-    transform: translateY(v.$hero-scroll-hover-shift);
-  }
-
-  @include m.hover-device {
-    &__scroll:hover &__scroll-icon {
-      transform: translateY(v.$hero-scroll-hover-shift);
     }
   }
 }
