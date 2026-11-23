@@ -1,7 +1,13 @@
 <ng-template #content><ng-content /></ng-template>
 
 @if (link()) {
-  <a class="text-link" [routerLink]="link()"><ng-container *ngTemplateOutlet="content" /></a>
+  <a
+    class="text-link"
+    [routerLink]="link()"
+    routerLinkActive="text-link--active"
+    ariaCurrentWhenActive="page"
+    ><ng-container *ngTemplateOutlet="content"
+  /></a>
 } @else {
   <a class="text-link" [href]="url()" target="_blank" rel="noopener noreferrer"
     ><ng-container *ngTemplateOutlet="content" /> <span class="text-link__arrow"> ↗</span></a

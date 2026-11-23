@@ -1,9 +1,9 @@
 import { NgTemplateOutlet } from '@angular/common';
 import { Component, input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  imports: [NgTemplateOutlet, RouterLink],
+  imports: [NgTemplateOutlet, RouterLink, RouterLinkActive],
   selector: 'app-text-link',
   styleUrl: './text-link.scss',
   templateUrl: './text-link.html',
