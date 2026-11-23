@@ -3,26 +3,34 @@
     <span class="header__logo-name">S.Sträter</span>
   </a>
 
-  <nav class="header__nav" aria-label="Main navigation">
-    <ul class="header__list">
-      @for (link of links; track link.fragment) {
-        <li>
-          <a class="header__link" routerLink="/" [fragment]="link.fragment">{{ link.label }}</a>
-        </li>
-      }
-    </ul>
-  </nav>
+  @if (headerVariant.isMinimal()) {
+    <app-text-link class="header__back" link="/"
+      ><span aria-hidden="true">←</span> Back to portfolio</app-text-link
+    >
+  } @else {
+    <nav class="header__nav" aria-label="Main navigation">
+      <ul class="header__list">
+        @for (link of links; track link.fragment) {
+          <li>
+            <a class="header__link" routerLink="/" [fragment]="link.fragment">{{ link.label }}</a>
+          </li>
+        }
+      </ul>
+    </nav>
 
-  <app-button
-    class="header__download"
-    href="/pdf/CV_Stefan_Straeter.pdf"
-    [download]="true"
-    variant="dark"
-    >Download CV ↓</app-button
-  >
+    <app-button
+      class="header__download"
+      href="/pdf/CV_Stefan_Straeter.pdf"
+      [download]="true"
+      variant="dark"
+      >Download CV ↓</app-button
+    >
 
-  <app-icon-button class="header__menu-button" label="Open menu" icon="menu" (click)="openMenu()"
-    >Menu</app-icon-button
-  >
+    <app-icon-button class="header__menu-button" label="Open menu" icon="menu" (click)="openMenu()"
+      >Menu</app-icon-button
+    >
+  }
 </header>
-<app-mobile-menu [isOpen]="isMenuOpen()" (closed)="closeMenu()" />
+@if (!headerVariant.isMinimal()) {
+  <app-mobile-menu [isOpen]="isMenuOpen()" (closed)="closeMenu()" />
+}
