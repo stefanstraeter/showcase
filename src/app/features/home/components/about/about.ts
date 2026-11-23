@@ -13,5 +13,5 @@ import { PhotoStrip } from '@features/home/components/about/photo-strip/photo-st
   templateUrl: './about.html',
 })
 export class About {
-  readonly facts: AboutFact[] = ABOUT_FACTS;
+  protected readonly facts: AboutFact[] = ABOUT_FACTS;
 }
