@@ -78,6 +78,11 @@
     @include m.press-scale;
   }
 
+  &__back {
+    grid-column: -2;
+    justify-self: end;
+  }
+
   &__menu-button {
     @include m.tablet {
       display: none;

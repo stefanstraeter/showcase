@@ -52,6 +52,7 @@ $line-height-tight: 0.88;
 $line-height-heading: 1;
 $line-height-list: 1.3;
 $line-height-body: 1.5;
+$line-height-legal: 1.5;
 
 $letter-spacing-label: 0.04em;
 $letter-spacing-hero: -0.02em;
@@ -67,7 +68,7 @@ $text-h3: 1.875rem;
 $text-number-mobile: 1.5rem;
 $text-list: 1.875rem;
 $text-list-mobile: 1.5rem;
-$text-body: 1.0625rem;
+$text-body: 1rem;
 $text-body-mobile: 1rem;
 $text-small: 0.875rem;
 $text-label: 0.75rem;
@@ -271,3 +272,20 @@ $hero-padding-block-desktop: $space-xl;
 $hero-photo-width-desktop: calc(#{$text-hero-desktop} * 5);
 $hero-photo-ratio-desktop: 7 / 3;
 $hero-photo-position: center 25%;
+
+// Legal
+$legal-padding-top: $space-xl;
+$legal-padding-top-desktop: $space-3xl;
+$legal-padding-bottom: $space-2xl;
+$legal-padding-bottom-desktop: $space-3xl;
+$legal-gap: $space-xl;
+$legal-column-gap: $space-xl;
+$legal-intro-gap: $space-s;
+$legal-intro-sticky-top: $space-l;
+$legal-title-size: clamp(3.5rem, 2rem + 4vw, 6rem);
+$legal-switch-gap: $space-m;
+$legal-switch-dimmed-opacity: 0.4;
+$legal-row-gap: $space-xs;
+$legal-row-padding-block: $space-m;
+$legal-label-width: 12.5rem;
+$legal-text-max-width: 62ch;

@@ -7,7 +7,10 @@
   font: inherit;
   text-decoration: none;
   display: inline-block;
-  transition: transform v.$transition;
+  opacity: var(--text-link-opacity, 1);
+  transition:
+    transform v.$transition,
+    opacity v.$transition;
 
   @include m.press-scale;
 
@@ -26,10 +29,18 @@
   }
 
   @include m.hover-device {
+    &:hover {
+      opacity: 1;
+    }
+
     &:hover::after {
       transform: scaleX(1);
       transform-origin: left;
     }
+  }
+
+  &--active {
+    opacity: 1;
   }
 
   &__arrow {

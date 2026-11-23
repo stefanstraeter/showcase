@@ -1,0 +1,97 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+:host {
+  display: block;
+  background-color: v.$color-background;
+  color: v.$color-text;
+}
+
+.legal-layout {
+  @include m.content-width;
+  display: grid;
+  gap: v.$legal-gap;
+  padding-top: v.$legal-padding-top;
+  padding-bottom: v.$legal-padding-bottom;
+
+  @include m.desktop {
+    @include m.full-screen;
+    grid-template-columns: 1fr 2fr;
+    column-gap: v.$legal-column-gap;
+    align-content: start;
+    align-items: start;
+    padding-top: v.$legal-padding-top-desktop;
+    padding-bottom: v.$legal-padding-bottom-desktop;
+  }
+
+  &__intro {
+    display: grid;
+    gap: v.$legal-intro-gap;
+
+    @include m.desktop {
+      position: sticky;
+      top: v.$legal-intro-sticky-top;
+    }
+  }
+
+  &__eyebrow {
+    @include m.label;
+    margin: 0;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: v.$font-display;
+    font-size: v.$legal-title-size;
+    font-weight: v.$font-weight-regular;
+    line-height: v.$line-height-heading;
+    letter-spacing: v.$letter-spacing-hero;
+  }
+
+  &__switch-list {
+    @include m.label;
+    display: flex;
+    gap: v.$legal-switch-gap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__switch-item {
+    --text-link-opacity: #{v.$legal-switch-dimmed-opacity};
+  }
+
+  &__list {
+    margin: 0;
+    border-bottom: v.$border-soft;
+  }
+
+  &__row {
+    display: grid;
+    gap: v.$legal-row-gap;
+    padding-block: v.$legal-row-padding-block;
+    border-top: v.$border-soft;
+
+    @include m.tablet {
+      grid-template-columns: v.$legal-label-width 1fr;
+      column-gap: v.$legal-column-gap;
+    }
+  }
+
+  &__label {
+    @include m.label;
+    color: v.$color-text-muted;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: v.$legal-text-max-width;
+    margin: 0;
+    font-size: v.$text-body;
+    line-height: v.$line-height-legal;
+  }
+
+  &__line {
+    margin: 0;
+  }
+}
