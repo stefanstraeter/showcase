@@ -118,6 +118,9 @@ $press-scale: 0.95;
 
 // Arrow button
 $arrow-button-size: 3.75rem;
+$arrow-button-size-small: 1.25rem;
+$arrow-button-min-size: 2.75rem;
+$arrow-button-gap: $space-xs;
 $arrow-button-stroke-width: 1.8;
 $arrow-button-hover-shift: 0.25rem;
 
@@ -248,15 +251,14 @@ $photo-strip-padding-bottom: $space-2xl;
 
 // Footer
 $footer-gap: $space-s;
-$footer-bar-gap: $space-xs;
-$footer-bar-padding-top: $space-s;
 $footer-padding-top: $space-l;
-$footer-name-size: 22cqw;
-$footer-name-visible-height: 0.55em;
-$footer-name-color: $color-decoration;
-$footer-link-gap: $space-m;
-$footer-link-min-size: 2.75rem;
-$footer-link-hover-opacity: 0.6;
+$footer-padding-bottom: $space-s;
+$footer-section-padding-top: $space-s;
+$footer-column-gap: $space-l;
+$footer-label-gap: $space-xs;
+$footer-text-size: $text-list-mobile;
+$footer-text-max-width: 24em;
+$footer-link-min-size: 1.75rem;
 
 // Hero
 $hero-gap: $space-l;
