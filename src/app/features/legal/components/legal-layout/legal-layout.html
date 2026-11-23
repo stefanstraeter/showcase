@@ -1,0 +1,29 @@
+<article class="legal-layout">
+  <header class="legal-layout__intro">
+    <p class="legal-layout__eyebrow">(Legal)</p>
+    <h1 class="legal-layout__title">{{ title() }}</h1>
+    <nav class="legal-layout__switch" aria-label="Legal pages">
+      <ul class="legal-layout__switch-list">
+        @for (link of links; track link.path) {
+          <li class="legal-layout__switch-item">
+            <app-text-link [link]="link.path">{{ link.label }}</app-text-link>
+          </li>
+        }
+      </ul>
+    </nav>
+  </header>
+  <div class="legal-layout__content">
+    <dl class="legal-layout__list">
+      @for (row of rows(); track row.label) {
+        <div class="legal-layout__row">
+          <dt class="legal-layout__label">{{ row.label }}</dt>
+          <dd class="legal-layout__text">
+            @for (line of row.lines; track line) {
+              <p class="legal-layout__line">{{ line }}</p>
+            }
+          </dd>
+        </div>
+      }
+    </dl>
+  </div>
+</article>
