@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { HeaderVariant } from '@core/services/header-variant';
+import { LayoutVariant } from '@core/services/layout-variant';
 import { MobileMenu } from '@layout/mobile-menu/mobile-menu';
 import { IconButton } from '@shared/components/icon-button/icon-button';
 import { MENU_LINKS } from '@layout/model/constants/menu-links';
@@ -16,7 +16,7 @@ import { TextLink } from '@shared/components/text-link/text-link';
   templateUrl: './header.html',
 })
 export class Header {
-  protected readonly headerVariant = inject(HeaderVariant);
+  protected readonly layoutVariant = inject(LayoutVariant);
   readonly links: MenuLink[] = MENU_LINKS;
   isMenuOpen = signal<boolean>(false);
 

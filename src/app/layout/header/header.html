@@ -3,34 +3,46 @@
     <span class="header__logo-name">S.Sträter</span>
   </a>
 
-  @if (headerVariant.isMinimal()) {
-    <app-text-link class="header__back" link="/"
-      ><span aria-hidden="true">←</span> Back to portfolio</app-text-link
-    >
-  } @else {
-    <nav class="header__nav" aria-label="Main navigation">
-      <ul class="header__list">
-        @for (link of links; track link.fragment) {
-          <li>
-            <a class="header__link" routerLink="/" [fragment]="link.fragment">{{ link.label }}</a>
-          </li>
-        }
-      </ul>
-    </nav>
+  @switch (layoutVariant.current()) {
+    @case ('legal') {
+      <app-text-link class="header__back" link="/"
+        ><span aria-hidden="true">←</span> Back to portfolio</app-text-link
+      >
+    }
 
-    <app-button
-      class="header__download"
-      href="/pdf/CV_Stefan_Straeter.pdf"
-      [download]="true"
-      variant="dark"
-      >Download CV ↓</app-button
-    >
+    @default {
+      <nav class="header__nav" aria-label="Main navigation">
+        <ul class="header__list">
+          @for (link of links; track link.fragment) {
+            <li>
+              <a class="header__link" routerLink="/" [fragment]="link.fragment">{{ link.label }}</a>
+            </li>
+          }
+        </ul>
+      </nav>
 
-    <app-icon-button class="header__menu-button" label="Open menu" icon="menu" (click)="openMenu()"
-      >Menu</app-icon-button
-    >
+      <app-button
+        class="header__download"
+        href="/pdf/CV_Stefan_Straeter.pdf"
+        [download]="true"
+        variant="dark"
+        >Download CV ↓</app-button
+      >
+
+      <app-icon-button
+        class="header__menu-button"
+        label="Open menu"
+        icon="menu"
+        (click)="openMenu()"
+        >Menu</app-icon-button
+      >
+    }
+
+    @case ('error') {
+      <p class="header__status">Error 404</p>
+    }
   }
 </header>
-@if (!headerVariant.isMinimal()) {
+@if (layoutVariant.current() === 'default') {
   <app-mobile-menu [isOpen]="isMenuOpen()" (closed)="closeMenu()" />
 }

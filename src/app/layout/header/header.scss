@@ -97,4 +97,10 @@
       justify-self: end;
     }
   }
+
+  &__status {
+    color: v.$color-accent;
+    grid-column: -2;
+    justify-self: end;
+  }
 }
