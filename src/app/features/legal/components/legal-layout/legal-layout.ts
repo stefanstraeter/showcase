@@ -1,5 +1,5 @@
-import { Component, inject, input, OnDestroy } from '@angular/core';
-import { HeaderVariant } from '@core/services/header-variant';
+import { Component, effect, inject, input, OnDestroy } from '@angular/core';
+import { LayoutVariant } from '@core/services/layout-variant';
 import { LegalRow } from '@features/legal/model/interfaces/legal-row';
 import { LEGAL_LINKS } from '@layout/model/constants/legal-links';
 import { LegalLink } from '@layout/model/interfaces/legal-link';
@@ -17,17 +17,22 @@ export class LegalLayout implements OnDestroy {
 
   protected readonly links: LegalLink[] = LEGAL_LINKS;
 
-  private readonly headerVariant = inject(HeaderVariant);
+  private readonly layoutVariant = inject(LayoutVariant);
 
   constructor() {
-    this.headerVariant.isMinimal.set(true);
+    this.layoutVariant.current.set('legal');
+
+    effect(() => {
+      this.layoutVariant.pageLabel.set(this.title());
+    });
   }
 
   /**
-   * @description Switches the header back to its full variant when the legal page is left.
+   * @description Switches the layout back to its full variant when the legal page is left.
    * @memberof LegalLayout
    */
   ngOnDestroy(): void {
-    this.headerVariant.isMinimal.set(false);
+    this.layoutVariant.current.set('default');
+    this.layoutVariant.pageLabel.set('');
   }
 }
