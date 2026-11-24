@@ -1,0 +1,39 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+:host {
+  display: block;
+  background-color: v.$color-background;
+  color: v.$color-text;
+}
+
+.not-found {
+  @include m.content-width;
+  @include m.full-screen;
+  display: grid;
+  gap: v.$not-found-gap;
+  align-content: center;
+  justify-items: start;
+  padding-top: v.$not-found-padding-block;
+  padding-bottom: v.$not-found-padding-block;
+
+  @include m.desktop {
+    padding-top: v.$not-found-padding-block-desktop;
+    padding-bottom: v.$not-found-padding-block-desktop;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: v.$not-found-title-size;
+    line-height: v.$line-height-tight;
+    letter-spacing: v.$letter-spacing-hero;
+  }
+
+  &__text {
+    max-width: v.$not-found-text-max-width;
+    margin: 0;
+    font-family: v.$font-display;
+    font-size: v.$not-found-text-size;
+    line-height: v.$line-height-list;
+  }
+}
