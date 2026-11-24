@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LayoutVariant } from '@core/services/layout-variant';
 
 import { EXTERNAL_LINKS } from '@layout/model/constants/external-links';
 import { LEGAL_LINKS } from '@layout/model/constants/legal-links';
@@ -14,6 +15,8 @@ import { TextLink } from '@shared/components/text-link/text-link';
   templateUrl: './footer.html',
 })
 export class Footer {
+  protected readonly layoutVariant = inject(LayoutVariant);
+
   protected readonly externalLinks: ExternalLink[] = EXTERNAL_LINKS;
   protected readonly legalLinks: LegalLink[] = LEGAL_LINKS;
 

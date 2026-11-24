@@ -108,9 +108,20 @@
     }
   }
 
+  &__bar--minimal {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 'credit page';
+  }
+
   &__credit,
-  &__built {
+  &__built,
+  &__page {
     margin: 0;
+  }
+
+  &__page {
+    grid-area: page;
+    justify-self: end;
   }
 
   &__credit {
