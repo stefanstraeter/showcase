@@ -7,15 +7,22 @@
   <ul class="work__list" (mousemove)="moveCursor($event)" (mouseleave)="hidePreview()">
     @for (project of projects; track project.slug; let i = $index) {
       <li class="work__item">
-        <article class="work__project">
+        <article class="work__project" [attr.aria-labelledby]="'work-title-' + project.slug">
           @if (project.screenshot) {
             <figure class="work__figure">
-              <img
-                class="work__screenshot"
-                [src]="project.screenshot"
-                alt="Screenshot of {{ project.title }}"
-                loading="lazy"
-              />
+              <a
+                class="work__figure-link"
+                [routerLink]="['/work', project.slug]"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img
+                  class="work__screenshot"
+                  [src]="project.screenshot"
+                  alt="Screenshot of {{ project.title }}"
+                  loading="lazy"
+                />
+              </a>
             </figure>
           }
 
@@ -25,7 +32,7 @@
             (mouseenter)="showPreview(project)"
           >
             <span class="work__number">{{ i + 1 | number: '2.0-0' }}</span>
-            <h3 class="work__title">{{ project.title }}</h3>
+            <h3 class="work__title" [id]="'work-title-' + project.slug">{{ project.title }}</h3>
             <p class="work__subtitle">{{ project.subtitle }}</p>
             <ul class="work__tech-list">
               @for (item of project.tech; track item) {
