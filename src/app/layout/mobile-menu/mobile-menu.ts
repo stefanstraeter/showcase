@@ -1,6 +1,7 @@
 import { Component, effect, ElementRef, inject, input, output, viewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
+import { ActiveSection } from '@core/services/active-section';
 import { LocalTime } from '@core/services/local-time';
 import { EXTERNAL_LINKS } from '@layout/model/constants/external-links';
 import { MENU_LINKS } from '@layout/model/constants/menu-links';
@@ -16,6 +17,7 @@ import { TextLink } from '@shared/components/text-link/text-link';
   templateUrl: './mobile-menu.html',
 })
 export class MobileMenu {
+  protected readonly activeSection = inject(ActiveSection);
   protected readonly localTime = inject(LocalTime);
   private readonly dialog = viewChild<ElementRef<HTMLDialogElement>>('dialog');
 
