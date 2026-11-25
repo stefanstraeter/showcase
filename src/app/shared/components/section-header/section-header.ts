@@ -8,4 +8,5 @@ import { Component, input } from '@angular/core';
 })
 export class SectionHeader {
   number = input.required<string>();
+  titleId = input.required<string>();
 }
