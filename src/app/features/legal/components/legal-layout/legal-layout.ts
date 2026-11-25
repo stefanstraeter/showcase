@@ -12,7 +12,7 @@ import { TextLink } from '@shared/components/text-link/text-link';
   templateUrl: './legal-layout.html',
 })
 export class LegalLayout implements OnDestroy {
-  title = input.required<string>();
+  pageTitle = input.required<string>();
   rows = input.required<LegalRow[]>();
 
   protected readonly links: LegalLink[] = LEGAL_LINKS;
@@ -23,7 +23,7 @@ export class LegalLayout implements OnDestroy {
     this.layoutVariant.current.set('legal');
 
     effect(() => {
-      this.layoutVariant.pageLabel.set(this.title());
+      this.layoutVariant.pageLabel.set(this.pageTitle());
     });
   }
 
