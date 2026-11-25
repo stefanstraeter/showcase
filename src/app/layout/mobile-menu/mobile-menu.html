@@ -14,7 +14,6 @@
             class="mobile-menu__link"
             routerLink="/"
             [fragment]="link.fragment"
-            [attr.aria-current]="activeSection.active() === link.fragment ? 'true' : null"
             (click)="closed.emit()"
           >
             <span class="mobile-menu__number">(0{{ index + 1 }})</span>

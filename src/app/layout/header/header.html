@@ -19,7 +19,6 @@
                 class="header__link"
                 routerLink="/"
                 [fragment]="link.fragment"
-                [attr.aria-current]="activeSection.active() === link.fragment ? 'true' : null"
                 >{{ link.label }}</a
               >
             </li>
