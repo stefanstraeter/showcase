@@ -14,11 +14,8 @@ export class CopyEmail {
   private resetTimer?: number;
 
   /**
-   * @description Copies the email address to the clipboard and shows the feedback message.
+   * Copies the email address to the clipboard and shows the feedback message.
    * Logs an error if the browser denies access to the clipboard.
-   * @protected
-   * @return {Promise<void>}
-   * @memberof CopyEmail
    */
   protected async copyEmail(): Promise<void> {
     try {
@@ -30,11 +27,8 @@ export class CopyEmail {
   }
 
   /**
-   * @description Shows the feedback message and hides it again after a short delay.
+   * Shows the feedback message and hides it again after a short delay.
    * A running timer is cancelled first, so quick repeated clicks do not hide it too early.
-   * @private
-   * @return {void}
-   * @memberof CopyEmail
    */
   private showFeedback(): void {
     window.clearTimeout(this.resetTimer);

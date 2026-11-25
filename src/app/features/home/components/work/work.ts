@@ -20,26 +20,23 @@ export class Work {
   readonly cursorY = signal<number>(0);
 
   /**
-   * @description Sets the project whose preview is shown.
-   * @param {Project} project
-   * @memberof Work
+   * Sets the project whose preview is shown.
+   * @param project The project to preview.
    */
   showPreview(project: Project): void {
     this.activeProject.set(project);
   }
 
   /**
-   * @description Clears the active project so the preview disappears.
-   * @memberof Work
+   * Clears the active project so the preview disappears.
    */
   hidePreview(): void {
     this.activeProject.set(null);
   }
 
   /**
-   * @description Stores the current mouse position.
-   * @param {MouseEvent} event
-   * @memberof Work
+   * Stores the current mouse position.
+   * @param event The mouse event with the cursor position.
    */
   moveCursor(event: MouseEvent): void {
     this.cursorX.set(event.clientX);

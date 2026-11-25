@@ -21,9 +21,7 @@ export class Footer {
   protected readonly legalLinks: LegalLink[] = LEGAL_LINKS;
 
   /**
-   * @description Scrolls smoothly back to the top of the page.
-   * @protected
-   * @memberof Footer
+   * Scrolls smoothly back to the top of the page.
    */
   protected scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });

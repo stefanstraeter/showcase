@@ -21,16 +21,14 @@ export class Header {
   isMenuOpen = signal<boolean>(false);
 
   /**
-   * @description Opens the mobile menu.
-   * @memberof Header
+   * Opens the mobile menu.
    */
   openMenu(): void {
     this.isMenuOpen.set(true);
   }
 
   /**
-   * @description Closes the mobile menu, regardless of its current state.
-   * @memberof Header
+   * Closes the mobile menu, regardless of its current state.
    */
   closeMenu(): void {
     this.isMenuOpen.set(false);

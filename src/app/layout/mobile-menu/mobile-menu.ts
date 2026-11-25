@@ -26,8 +26,7 @@ export class MobileMenu {
   closed = output<void>();
 
   /**
-   * @description Registers an effect that syncs the native dialog with the isOpen input.
-   * @memberof MobileMenu
+   * Registers an effect that syncs the native dialog with the isOpen input.
    */
   constructor() {
     effect((): void => {
@@ -36,9 +35,8 @@ export class MobileMenu {
   }
 
   /**
-   * @description Opens or closes the native dialog so that it matches the given state.
+   * Opens or closes the native dialog so that it matches the given state.
    * @param isOpen Whether the menu should be open.
-   * @memberof MobileMenu
    */
   private syncDialog(isOpen: boolean): void {
     const dialog: HTMLDialogElement | undefined = this.dialog()?.nativeElement;

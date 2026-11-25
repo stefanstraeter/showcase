@@ -20,8 +20,7 @@ export class LegalLayout implements OnDestroy {
   private readonly layoutVariant = inject(LayoutVariant);
 
   /**
-   * @description Switches the layout to the legal variant and keeps the page label in sync with the title.
-   * @memberof LegalLayout
+   * Switches the layout to the legal variant and keeps the page label in sync with the title.
    */
   constructor() {
     this.layoutVariant.current.set('legal');
@@ -32,8 +31,7 @@ export class LegalLayout implements OnDestroy {
   }
 
   /**
-   * @description Switches the layout back to its full variant when the legal page is left.
-   * @memberof LegalLayout
+   * Switches the layout back to its full variant when the legal page is left.
    */
   ngOnDestroy(): void {
     this.layoutVariant.current.set('default');

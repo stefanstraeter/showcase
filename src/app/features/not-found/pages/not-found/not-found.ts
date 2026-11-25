@@ -14,8 +14,7 @@ export class NotFound implements OnDestroy {
   private readonly layoutVariant = inject(LayoutVariant);
 
   /**
-   * @description Switches the layout to the error variant and sets the page label.
-   * @memberof NotFound
+   * Switches the layout to the error variant and sets the page label.
    */
   constructor() {
     this.layoutVariant.current.set('error');
@@ -23,8 +22,7 @@ export class NotFound implements OnDestroy {
   }
 
   /**
-   * @description Switches the layout back to its full variant when the error page is left.
-   * @memberof NotFound
+   * Switches the layout back to its full variant when the error page is left.
    */
   ngOnDestroy(): void {
     this.layoutVariant.current.set('default');
