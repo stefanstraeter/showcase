@@ -13,6 +13,10 @@ const ERROR_PAGE_LABEL = '404';
 export class NotFound implements OnDestroy {
   private readonly layoutVariant = inject(LayoutVariant);
 
+  /**
+   * @description Switches the layout to the error variant and sets the page label.
+   * @memberof NotFound
+   */
   constructor() {
     this.layoutVariant.current.set('error');
     this.layoutVariant.pageLabel.set(ERROR_PAGE_LABEL);

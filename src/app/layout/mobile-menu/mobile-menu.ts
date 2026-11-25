@@ -25,6 +25,10 @@ export class MobileMenu {
   isOpen = input<boolean>(false);
   closed = output<void>();
 
+  /**
+   * @description Registers an effect that syncs the native dialog with the isOpen input.
+   * @memberof MobileMenu
+   */
   constructor() {
     effect((): void => {
       this.syncDialog(this.isOpen());

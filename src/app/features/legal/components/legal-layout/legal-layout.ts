@@ -19,6 +19,10 @@ export class LegalLayout implements OnDestroy {
 
   private readonly layoutVariant = inject(LayoutVariant);
 
+  /**
+   * @description Switches the layout to the legal variant and keeps the page label in sync with the title.
+   * @memberof LegalLayout
+   */
   constructor() {
     this.layoutVariant.current.set('legal');
 

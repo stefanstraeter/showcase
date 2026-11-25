@@ -9,6 +9,9 @@ const UPDATE_INTERVAL_MS = 1000;
 export class LocalTime {
   time = signal<string>(this.readNow());
 
+  /**
+   * Starts a timer that refreshes the time signal at a fixed interval.
+   */
   constructor() {
     setInterval((): void => {
       this.time.set(this.readNow());
