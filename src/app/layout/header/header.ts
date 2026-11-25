@@ -8,7 +8,11 @@ import { MENU_LINKS } from '@layout/model/constants/menu-links';
 import { MenuLink } from '@layout/model/interfaces/menu-link';
 import { Button } from '@shared/components/button/button';
 import { TextLink } from '@shared/components/text-link/text-link';
+import { ActiveSection } from '@core/services/active-section';
 
+/**
+ * Site header with logo, navigation and mobile menu, which marks the section that is currently on screen.
+ */
 @Component({
   imports: [RouterLink, IconButton, MobileMenu, Button, TextLink],
   selector: 'app-header',
@@ -16,8 +20,11 @@ import { TextLink } from '@shared/components/text-link/text-link';
   templateUrl: './header.html',
 })
 export class Header {
+  protected readonly activeSection = inject(ActiveSection);
   protected readonly layoutVariant = inject(LayoutVariant);
+
   readonly links: MenuLink[] = MENU_LINKS;
+
   isMenuOpen = signal<boolean>(false);
 
   /**
