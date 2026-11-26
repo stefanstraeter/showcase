@@ -1,11 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
+import { Component, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
-import { Project } from '@features/home/model/interfaces/project';
-import { PROJECTS } from '@features/home/model/constants/projects';
+import { Project } from '@features/work/model/interfaces/project';
+import { ProjectCatalog } from '@features/work/services/project-catalog';
 import { SectionHeader } from '@shared/components/section-header/section-header';
 import { TextLink } from '@shared/components/text-link/text-link';
-import { RouterLink } from '@angular/router';
-import { DecimalPipe } from '@angular/common';
 
 @Component({
   imports: [SectionHeader, TextLink, RouterLink, DecimalPipe],
@@ -14,7 +14,8 @@ import { DecimalPipe } from '@angular/common';
   templateUrl: './work.html',
 })
 export class Work {
-  readonly projects: Project[] = PROJECTS;
+  protected readonly projects = inject(ProjectCatalog).projects;
+
   readonly activeProject = signal<Project | null>(null);
   readonly cursorX = signal<number>(0);
   readonly cursorY = signal<number>(0);
