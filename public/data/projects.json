@@ -1,0 +1,117 @@
+[
+  {
+    "slug": "opina",
+    "title": "Opina",
+    "subtitle": "Create surveys in minutes, let people vote and watch the results move live.",
+    "tech": ["Angular", "TypeScript", "SCSS", "Supabase"],
+    "liveUrl": "https://stefanstraeter.github.io/opina/",
+    "githubUrl": "https://github.com/stefanstraeter/opina",
+    "screenshot": "img/opina/card.webp",
+    "caseStudy": {
+      "intro": "Opina is a mobile-first survey app. Publish a survey with your own questions, share it and let people vote. Every result bar updates in real time for all visitors, without a reload.",
+      "role": "Design & Development",
+      "timeline": "2 weeks",
+      "heroImage": { "src": "img/opina/hero.webp", "alt": "Opina start page with the headline “Collect feedback, unlock ideas.”, a live results card and a grid of active surveys", "caption": "Start page with active surveys" },
+      "detailImages": [
+        { "src": "img/opina/detail-01.webp", "alt": "Opina start page on a phone with the headline, buttons for a new survey and a live results card", "caption": "Start page", "aspectRatio": "738 / 1600" },
+        { "src": "img/opina/detail-02.webp", "alt": "Form for creating a new survey with fields for name, end date, category and description", "caption": "Create survey", "aspectRatio": "738 / 1600" },
+        { "src": "img/opina/detail-03.webp", "alt": "Published survey about developer tools with the first question answered and macOS selected", "caption": "Vote", "aspectRatio": "738 / 1600" }
+      ],
+      "challenge": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ],
+      "approach": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ],
+      "learned": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ]
+    }
+  },
+  {
+    "slug": "kanvera",
+    "title": "Kanvera",
+    "subtitle": "Plan, organize and execute work in one place: Board, Inbox, Team and Pulse.",
+    "tech": ["JavaScript (ES6+)", "CSS", "Firebase"],
+    "liveUrl": "https://stefanstraeter.github.io/kanvera/",
+    "githubUrl": "https://github.com/stefanstraeter/kanvera",
+    "screenshot": "img/kanvera/card.webp",
+    "caseStudy": {
+      "intro": "Kanvera is a project management app built without a framework. Tasks move across a Kanban board, personal work lands in the Inbox, the team is managed in one directory and Pulse shows how the day is going.",
+      "role": "Design & Development",
+      "timeline": "4 weeks",
+      "heroImage": { "src": "img/kanvera/hero.webp", "alt": "Kanvera board in dark mode with task cards in four columns: Up next, In progress, Review and Done", "caption": "Kanban board" },
+      "detailImages": [
+        { "src": "img/kanvera/detail-01.webp", "alt": "Kanban board on a phone with task cards and a bottom navigation for Pulse, Board, Inbox and Team", "caption": "Board", "aspectRatio": "738 / 1600" },
+        { "src": "img/kanvera/detail-02.webp", "alt": "Dialog for editing a team member with photo, role, email address and phone number", "caption": "Edit profile", "aspectRatio": "738 / 1600" },
+        { "src": "img/kanvera/detail-03.webp", "alt": "Pulse dashboard with key figures: tasks on the board, one urgent issue with deadline, up next and in progress", "caption": "Pulse", "aspectRatio": "738 / 1600" }
+      ],
+      "challenge": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ],
+      "approach": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ],
+      "learned": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ]
+    }
+  },
+  {
+    "slug": "chunky-pairs",
+    "title": "Chunky Pairs",
+    "subtitle": "Flip cards, find matching pairs and race the clock in a head-to-head memory game.",
+    "tech": ["JavaScript (ES6+)", "TypeScript", "SCSS", "Vite"],
+    "liveUrl": "https://stefanstraeter.github.io/chunky-pairs/",
+    "githubUrl": "https://github.com/stefanstraeter/chunky-pairs",
+    "screenshot": "img/chunky-pairs/card.webp",
+    "caseStudy": {
+      "intro": "Chunky Pairs is a mobile-first memory card game with a bold Neo-Brutalist look. Choose a board, pick a visual theme and starting player, then compete in local multiplayer.",
+      "role": "Design & Development",
+      "timeline": "2 weeks",
+      "heroImage": { "src": "img/chunky-pairs/hero.webp", "alt": "Chunky Pairs game board with a 6 by 6 card grid, the scores of both players and a turn timer", "caption": "Game in progress" },
+      "detailImages": [
+        { "src": "img/chunky-pairs/detail-01.webp", "alt": "Setup screen with options for theme, starting player and number of cards, and a Let’s play button", "caption": "Setup", "aspectRatio": "738 / 1600" },
+        { "src": "img/chunky-pairs/detail-02.webp", "alt": "Game board on a phone with open card pairs, both scores above and a turn timer below", "caption": "Game", "aspectRatio": "738 / 1600" },
+        { "src": "img/chunky-pairs/detail-03.webp", "alt": "End screen announcing that Player 1 wins with a final score of 6 to 2, with Restart and Menu buttons", "caption": "Result", "aspectRatio": "738 / 1600" }
+      ],
+      "challenge": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ],
+      "approach": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ],
+      "learned": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ]
+    }
+  },
+  {
+    "slug": "neon-city-2065",
+    "title": "Neon City 2065",
+    "subtitle": "Run, jump and fight through a side-scrolling action game in the browser.",
+    "tech": ["JavaScript (ES6+)", "CSS", "HTML5"],
+    "liveUrl": "https://stefanstraeter.github.io/neon-city-2065/",
+    "githubUrl": "https://github.com/stefanstraeter/neon-city-2065",
+    "screenshot": "img/neon-city-2065/card.webp",
+    "caseStudy": {
+      "intro": "Neon City 2065 is a side-scrolling action game that runs in the browser. Fight your way through a dystopian neon metropolis, defeat enemies and survive dynamic combat scenarios in a fully custom-built game engine.",
+      "role": "Design & Development",
+      "timeline": "3 weeks",
+      "heroImage": { "src": "img/neon-city-2065/hero.webp", "alt": "Pixel art scene in a neon-lit street: the hero on a hoverboard faces a large robot enemy", "caption": "Boss fight" },
+      "detailImages": [
+        { "src": "img/neon-city-2065/detail-01.webp", "alt": "Controls screen: arrow keys to move and use the jetpack, space bar to fire the plasma gun", "caption": "Controls", "aspectRatio": "16 / 9" },
+        { "src": "img/neon-city-2065/detail-02.webp", "alt": "The hero flies over the street on a hoverboard and fires a plasma shot", "caption": "Combat", "aspectRatio": "16 / 9" }
+      ],
+      "challenge": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ],
+      "approach": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ],
+      "learned": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ]
+    }
+  }
+]
