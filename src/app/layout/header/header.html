@@ -4,7 +4,7 @@
   </a>
 
   @switch (layoutVariant.current()) {
-    @case ('legal') {
+    @case ('minimal') {
       <app-text-link class="header__back" link="/"
         ><span aria-hidden="true">←</span> Back to portfolio</app-text-link
       >
@@ -15,12 +15,7 @@
         <ul class="header__list">
           @for (link of links; track link.fragment) {
             <li>
-              <a
-                class="header__link"
-                routerLink="/"
-                [fragment]="link.fragment"
-                >{{ link.label }}</a
-              >
+              <a class="header__link" routerLink="/" [fragment]="link.fragment">{{ link.label }}</a>
             </li>
           }
         </ul>
