@@ -1,14 +1,16 @@
 <section class="work" id="work" aria-labelledby="work-title">
   <header class="work__header">
-    <app-section-header number="02" titleId="work-title"> Selected <em>work</em></app-section-header>
+    <app-section-header number="02" titleId="work-title">
+      Selected <em>work</em></app-section-header
+    >
     <p class="work__hint">Hover a project</p>
   </header>
 
-  <ul class="work__list" (mousemove)="moveCursor($event)" (mouseleave)="hidePreview()">
-    @for (project of projects; track project.slug; let i = $index) {
-      <li class="work__item">
-        <article class="work__project" [attr.aria-labelledby]="'work-title-' + project.slug">
-          @if (project.screenshot) {
+  @if (projects.value(); as loadedProjects) {
+    <ul class="work__list" (mousemove)="moveCursor($event)" (mouseleave)="hidePreview()">
+      @for (project of loadedProjects; track project.slug; let i = $index) {
+        <li class="work__item">
+          <article class="work__project" [attr.aria-labelledby]="'work-title-' + project.slug">
             <figure class="work__figure">
               <a
                 class="work__figure-link"
@@ -24,35 +26,35 @@
                 />
               </a>
             </figure>
-          }
 
-          <a
-            class="work__front"
-            [routerLink]="['/work', project.slug]"
-            (mouseenter)="showPreview(project)"
-          >
-            <span class="work__number">{{ i + 1 | number: '2.0-0' }}</span>
-            <h3 class="work__title" [id]="'work-title-' + project.slug">{{ project.title }}</h3>
-            <p class="work__subtitle">{{ project.subtitle }}</p>
-            <ul class="work__tech-list">
-              @for (item of project.tech; track item) {
-                <li class="work__tech-item">{{ item }}</li>
-              }
+            <a
+              class="work__front"
+              [routerLink]="['/work', project.slug]"
+              (mouseenter)="showPreview(project)"
+            >
+              <span class="work__number">{{ i + 1 | number: '2.0-0' }}</span>
+              <h3 class="work__title" [id]="'work-title-' + project.slug">{{ project.title }}</h3>
+              <p class="work__subtitle">{{ project.subtitle }}</p>
+              <ul class="work__tech-list">
+                @for (item of project.tech; track item) {
+                  <li class="work__tech-item">{{ item }}</li>
+                }
+              </ul>
+            </a>
+
+            <ul class="work__links" (mouseenter)="hidePreview()">
+              <li>
+                <app-text-link [url]="project.liveUrl">Live preview</app-text-link>
+              </li>
+              <li>
+                <app-text-link [url]="project.githubUrl">GitHub</app-text-link>
+              </li>
             </ul>
-          </a>
-
-          <ul class="work__links" (mouseenter)="hidePreview()">
-            <li>
-              <app-text-link [url]="project.liveUrl">Live preview</app-text-link>
-            </li>
-            <li>
-              <app-text-link [url]="project.githubUrl">GitHub</app-text-link>
-            </li>
-          </ul>
-        </article>
-      </li>
-    }
-  </ul>
+          </article>
+        </li>
+      }
+    </ul>
+  }
 
   @if (activeProject()?.screenshot; as screenshot) {
     <figure class="work__preview" [style.left.px]="cursorX()" [style.top.px]="cursorY()">
