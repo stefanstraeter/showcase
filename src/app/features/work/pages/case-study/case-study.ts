@@ -1,6 +1,8 @@
-import { Component, computed, effect, inject, input } from '@angular/core';
+import { Component, computed, effect, inject, input, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { LayoutVariant } from '@core/services/layout-variant';
+import { PageTitle } from '@core/services/page-title';
 import { Project } from '@features/work/model/interfaces/project';
 import { ProjectCatalog } from '@features/work/services/project-catalog';
 
@@ -12,17 +14,34 @@ const NOT_FOUND_PATH = '/404';
   styleUrl: './case-study.scss',
   templateUrl: './case-study.html',
 })
-export class CaseStudy {
+export class CaseStudy implements OnDestroy {
   private readonly catalog = inject(ProjectCatalog);
+  private readonly layoutVariant = inject(LayoutVariant);
   private readonly router = inject(Router);
+  private readonly pageTitle = inject(PageTitle);
+
   readonly slug = input.required<string>();
 
   readonly currentProject = computed(() =>
     this.findProjectBySlug(this.catalog.projects.value() ?? [], this.slug()),
   );
 
+  /**
+   * Switches the layout to the minimal variant, keeps the footer label and the tab title
+   * in sync with the project title and shows the 404 page for an unknown slug.
+   */
   constructor() {
+    this.layoutVariant.current.set('minimal');
     effect(() => this.redirectIfUnknown());
+    effect(() => {
+      const projectTitle = this.currentProject()?.title;
+      const hasProject = projectTitle !== undefined;
+
+      this.layoutVariant.footerLabel.set(projectTitle ?? '');
+      if (hasProject) {
+        this.pageTitle.setPage(projectTitle);
+      }
+    });
   }
 
   /**
@@ -46,5 +65,13 @@ export class CaseStudy {
     if (isLoaded && isUnknown) {
       this.router.navigate([NOT_FOUND_PATH], { skipLocationChange: true });
     }
+  }
+
+  /**
+   * Switches the layout back to its full variant when the case study is left.
+   */
+  ngOnDestroy(): void {
+    this.layoutVariant.current.set('default');
+    this.layoutVariant.footerLabel.set('');
   }
 }
