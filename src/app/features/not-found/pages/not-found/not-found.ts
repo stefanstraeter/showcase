@@ -2,7 +2,7 @@ import { Component, inject, OnDestroy } from '@angular/core';
 import { LayoutVariant } from '@core/services/layout-variant';
 import { Button } from '@shared/components/button/button';
 
-const ERROR_PAGE_LABEL = '404';
+const ERROR_FOOTER_LABEL = '404';
 
 @Component({
   imports: [Button],
@@ -14,11 +14,11 @@ export class NotFound implements OnDestroy {
   private readonly layoutVariant = inject(LayoutVariant);
 
   /**
-   * Switches the layout to the error variant and sets the page label.
+   * Switches the layout to the error variant and sets the footer label.
    */
   constructor() {
     this.layoutVariant.current.set('error');
-    this.layoutVariant.pageLabel.set(ERROR_PAGE_LABEL);
+    this.layoutVariant.footerLabel.set(ERROR_FOOTER_LABEL);
   }
 
   /**
@@ -26,6 +26,6 @@ export class NotFound implements OnDestroy {
    */
   ngOnDestroy(): void {
     this.layoutVariant.current.set('default');
-    this.layoutVariant.pageLabel.set('');
+    this.layoutVariant.footerLabel.set('');
   }
 }
