@@ -20,13 +20,13 @@ export class LegalLayout implements OnDestroy {
   private readonly layoutVariant = inject(LayoutVariant);
 
   /**
-   * Switches the layout to the minimal variant and keeps the page label in sync with the title.
+   * Switches the layout to the minimal variant and keeps the footer label in sync with the title.
    */
   constructor() {
     this.layoutVariant.current.set('minimal');
 
     effect(() => {
-      this.layoutVariant.pageLabel.set(this.pageTitle());
+      this.layoutVariant.footerLabel.set(this.pageTitle());
     });
   }
 
@@ -35,6 +35,6 @@ export class LegalLayout implements OnDestroy {
    */
   ngOnDestroy(): void {
     this.layoutVariant.current.set('default');
-    this.layoutVariant.pageLabel.set('');
+    this.layoutVariant.footerLabel.set('');
   }
 }
