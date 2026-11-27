@@ -1,0 +1,13 @@
+@use 'mixins' as m;
+
+:host {
+  @include m.full-screen;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
