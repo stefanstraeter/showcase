@@ -9,5 +9,5 @@ export type LayoutVariantName = 'default' | 'minimal' | 'error';
 @Service()
 export class LayoutVariant {
   current = signal<LayoutVariantName>('default');
-  pageLabel = signal<string>('');
+  footerLabel = signal<string>('');
 }
