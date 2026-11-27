@@ -2,15 +2,17 @@
 @use 'mixins' as m;
 
 :host {
-  display: block;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   background-color: v.$color-background;
   color: v.$color-text;
 }
 
 .not-found {
   @include m.content-width;
-  @include m.full-screen;
   display: grid;
+  flex: 1;
   gap: v.$not-found-gap;
   align-content: center;
   justify-items: start;
