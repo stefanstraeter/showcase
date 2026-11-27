@@ -110,17 +110,17 @@
 
   &__bar--minimal {
     grid-template-columns: 1fr auto;
-    grid-template-areas: 'credit page';
+    grid-template-areas: 'credit page-label';
   }
 
   &__credit,
   &__built,
-  &__page {
+  &__page-label {
     margin: 0;
   }
 
-  &__page {
-    grid-area: page;
+  &__page-label {
+    grid-area: page-label;
     justify-self: end;
   }
 
