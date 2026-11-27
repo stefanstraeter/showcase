@@ -7,8 +7,8 @@ import { CaseStudy } from '@features/work/pages/case-study/case-study';
 
 export const routes: Routes = [
   { path: '', component: Home },
-  { path: 'work/:slug', component: CaseStudy },
-  { path: 'imprint', component: Imprint },
-  { path: 'privacy', component: Privacy },
-  { path: '**', component: NotFound },
+  { path: 'work/:slug', component: CaseStudy, title: 'Case study' },
+  { path: 'imprint', component: Imprint, title: 'Imprint' },
+  { path: 'privacy', component: Privacy, title: 'Privacy' },
+  { path: '**', component: NotFound, title: 'Page not found' },
 ];
